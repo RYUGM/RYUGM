@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        get 방식 method에 아무것도 안적으면 기본 get으로 적용
+        액션에 가고자 하는 방향 지정하면 입력받은 정보와 함께이동
+     -->
+    <form action="https://bbs.ruliweb.com/" method="get">
+        <input type="text" name="search">
+        <input type="submit">
+
+
+    </form>
+    <!-- post방식 - body에 내용을 실어서 보내므로 url부분에는 아무것도 안 나타남 -->
+    <form action="#" method="post">
+        <input type="text" name="id">
+        <input type="password" name="pw">
+        <input type="submit">
+
+
+    </form>
+    <form>
+        <input name="hobby" type="checkbox" id='soccer' />축구<br>
+        <input name="hobby" type="checkbox" id='basketball' />농구<br>
+        <input name="hobby" type="checkbox" id='hogu' />호구<br>
+        <hr>
+        <!-- checked 해주면 웹페이지 시작시 해당 태그를 선택된 성태로 시작 -->
+        <input name="gender" type="radio" id='male' checked />남<br>
+        <input name="gender" type="radio" id='female' />여<br>
+
+        <hr>
+        <input name="grade" type="radio" id='sang' checked />상<br>
+        <input name="grade" type="radio" id='middle' />중<br>
+        <input name="grade" type="radio" id='low' />하<br>
+        <hr>
+
+    </form>
+
+</body>
+
+</html>
