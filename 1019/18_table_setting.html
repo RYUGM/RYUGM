@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <!-- 제목 부부닝 빨간색이되게(단 자손태그만 쓸 것) -->
+    <!-- 테이블 태그의 자손인 tr태그, 그 tr태그의 자손인th -->
+    <!-- 만약 후손 태그로도 스타일 줄줄알면 백그라운드 한번 줘 보기(노란색) -->
+    <style>
+
+
+table>tbody>tr>th{
+    color: gold;
+    background-color: silver;
+    
+}
+
+ table td{
+    background-color: blue;
+    color: red;
+} 
+
+
+
+    
+    </style>
+
+</head>
+
+
+<body>
+    <table border="1">
+
+        <!-- tbody -->
+<tr>
+    
+<th>제목</th>
+<th>제목</th>
+
+</tr>
+
+
+<tr>
+    
+<td>본문1</td>
+<td>본문2</td>
+
+</tr>
+
+
+
+  <!-- /tbody -->
+</table>
+
+</body>
+</html>
