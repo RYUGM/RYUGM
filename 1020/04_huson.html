@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #aaa h1{color: red; background-color: aquamarine;}
+    /* 공백 후손 */
+    #aaa>p{color: burlywood; background-color: black;}
+    /* > 자손 */
+</style>
+
+</head>
+<body>
+    <div id="aaa">
+        <!-- div = 디비전 공간 분할 -->
+<h1>안녕하세요</h1>
+<p>네</p>
+<span>하이</span>
+<h1>안녕히 가세요</h1>
+<p>yes! </p>
+    </div>
+
+
+    <h1>asdf</h1>
+    <p>asdf</p>
+<div id="abcd">
+    <!-- #abcd>h1 -->
+    <h1>id가 abcd인 태그의 자손</h1>
+</div>
+
+
+    
+</body>
+</html>
