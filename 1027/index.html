@@ -36,9 +36,8 @@
     body{background-color: snow;
     background-image:url(A/BG.jpg);
     
-    width: 1500px;
-    margin: 0 auto;
-    position: relative;
+    background-size: contain;
+   
 }
     #Header{
         width: 1500px;
@@ -56,6 +55,13 @@
         top: 30px;
         left: 10px;
         right: 450px;
+    }
+    #Header1>h1{
+        position: absolute;
+        top: 30px;
+        left: 500px;
+        right: 0px;
+       
     }
     #WrapBody{
         width: 1500px;
@@ -250,13 +256,31 @@ border: 2px solid red;
 <style>
     .box1{width:400px; height: 80px;}
     .red1 {background-color: silver; right: 790px; top: 10px; position: absolute;}
+    .box2{width:400px; height: 80px;}
+    .red2 {background-color: silver; right: 300px; top: 10px; position: absolute;}
+    /* .box1{width:400px; height: 850px;} */
+    .red3 {background-color: darkred; right: 300px; top: 18px;  position: absolute;
+       }
+    .box4{width:400px; height: 7px;  z-index: 1;}
+    .red4 {background-color: silver; right: 300px; top: 80px;  position: absolute;
+        }
 </style>
 </head>
 <body>
 <div id = WrapBody>
     <header id="Header">
         <div class="box1 red1"></div>
-        <h1 style="color: darkred;" >Avengers</h1></header>
+        <h1 style="color: darkred;" >Avengers</h1>
+        <header id="Header1">
+        <div class="box1 red2"></div>
+        <h1 style="color: silver; z-index: 100;"  >Assemble</h1>
+    </header>
+        <div class="box1 red3"></div> 
+           <div class="box4 red4"></div> 
+           
+    
+    
+</header>
 <div style="margin: 20px;"></div>
 
    
