@@ -8,6 +8,21 @@
     <style>
         h1:hover{color: coral;background-color: cyan;}
     </style>
+<style>
+input[type=checkbox]:checked+#divC{
+    height: 0px;
+}
+#divC{
+    overflow: hidden;
+    width: 650px;
+    height: 300px;
+    -ms-transition-duration: 1s;
+    -webkit-transition-duration:1s;
+    -moz-transition-duration: 1s;
+    transition: 1s;
+}
+</style>
+
 </head>
 <body>
     <h1>hello</h1>
@@ -16,5 +31,10 @@
     <h1>hello</h1>
     <h1>hello</h1>
     <h1>hello</h1>
+    <input type="checkbox"/>
+<div id="divC">
+    <h1>asdfasfsdf  </h1>
+    <p>sdfasdfsadf
+    </div>
 </body>
 </html>
