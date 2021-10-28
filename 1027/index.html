@@ -7,6 +7,8 @@
     <title>Test Web</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Monsieur+La+Doulaise&family=Oxanium:wght@800&display=swap');
+        #font1{font-family: 'Oxanium', cursive;}
+        
         </style>
    <!-- 폰트 -->
     <style>
@@ -37,8 +39,17 @@
     background-image:url(A/BG.jpg);
     
     background-size: cover;
+    
    
 }
+#Header1{
+    width: 1500px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Oxanium', cursive;
+    position: relative;
+    }
     #Header{
         width: 1500px;
         margin: 0 auto;
@@ -76,6 +87,7 @@
             position: absolute;
             right: 0px;
             top: 0px;
+            left: 0px;
         }
     #Navi>ul {
             overflow: hidden;
@@ -84,28 +96,31 @@
 
         #Navi>ul>li {
             float: left;
+            right: 0px;
+            top: 0px;
+            left: 0px;
         }
 
         #Navi>ul>li>a {
             display: block;
-            padding: 15px 100px;
-            border: 1px solid black; 
+            padding: 20px 115px;
+            border: 2px solid goldenrod; 
             
             
         }
 
         #Navi>ul>li>a:hover {
-            background-color: black;
+            background-color: rgb(158, 8, 245);
             color: white;
         }
-
-        #Navi>ul>li:first-child>a {
-            border-radius: 10px 0px 0px 10px;
+        /* #Navi>ul>li:first-child>a { */
+        #Navi>ul>li>a {
+            border-radius: 10px 10px 10px 10px;
         }
-
-        #Navi>ul>li:last-child>a {
+        /* #Navi>ul>li:last-child>a { */
+        /* #Navi>ul>li>a {
             border-radius: 0px 10px 10px 0px;
-        }
+        } */
 </style>
 <!-- Navi -->
 <style>
@@ -121,7 +136,7 @@
     }
     #Rside{
        
-      width: 300px;
+      width: 310px;
       
       height: 600px;
       overflow: hidden;
@@ -186,19 +201,19 @@
         text-align: center;
 
          box-sizing: border-box; 
-        border: 1px solid black; 
+        border: 2px solid darkred; 
     }
     /* First */
     input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1){
-background-color: green;
+/* background-color: green; */
 color: black;
-border: 2px solid red;
+border: 5px solid goldenrod;
     }
     /* Second */
     input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2){
-        background-color: green;
+        /* background-color: green; */
 color: black;
-border: 2px solid red;
+border: 5px solid goldenrod;
     }
 
 </style>
@@ -207,7 +222,7 @@ border: 2px solid red;
 .item{
     overflow: hidden;
     padding: 10px;
-    border: 1px solid black;
+    border: 2px solid darkred;
     border-top: none;
 
 }
@@ -217,8 +232,10 @@ border: 2px solid red;
 }
 .description{
     float: left;
+    
     margin-left: 10px;
 }
+.description:hover{ background-color: gray; }
 .description>strong{
     display: block;
     width: 120px;
@@ -238,20 +255,20 @@ border: 2px solid red;
 <!-- checked -->
 <style>
     input[type=checkbox]:checked+#divC{
-        height: 0px;
+        height:0px;
     }
     #divC{
-        overflow: hidden;
-        width: 650px;
-        height: 300px;
-        -ms-transition-duration: 1s;
-        -webkit-transition-duration:1s;
-        -moz-transition-duration: 1s;
-        transition: 1s;
+        overflow: hidden; 
+        width: 1400px;
+        height: 200px;
+        transition-duration: 5s;
+        
     }
-<!-- checked -->
-<!-- foot -->
-<style>
+    /* input{display: none;} */
+    
+    #Hv:hover{border: 5px solid cyan;}
+</style>
+ <style>
     #Footer{
         width: 1500x;
         margin: 0 auto;
@@ -294,71 +311,83 @@ border: 2px solid red;
     
     
 </header>
+
 <div style="margin: 20px;"></div>
 
-   
-
-        <nav id="Navi" >
+        <nav id="Navi">
+           
         <ul>
-            <li> <a href="#" style="background-color: gray;" onclick="location.href='https://namu.wiki/w/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4(%EC%98%81%ED%99%94)?from=%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A41'">Avergers</a> </li>
-            <li > <a href="#" style="background-color: red;">Phase Two</a> </li>
-            <li > <a href="#"  style="background-color: goldenrod;">Phase Three</a> </li>
-            <li > <a href="#" style="background-color: purple;" >Phase Four</a> </li>
+          
+            <li ><a href="#" style="color: silver;" id="font1" onclick="location.href='https://namu.wiki/w/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4(%EC%98%81%ED%99%94)?from=%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A41'">Avergers(wiki)
+            
+            </a> 
+            </li>
+            
+            <li><a href="#" style="color: red;" id="font1" onclick="location.href='https://namu.wiki/w/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4:%20%EC%97%90%EC%9D%B4%EC%A7%80%20%EC%98%A4%EB%B8%8C%20%EC%9A%B8%ED%8A%B8%EB%A1%A0'">Age Of Ultron(wiki)</a> </li>
+            
+            <li><a href="#"  style="color: purple;" id="font1" onclick="location.href='https://namu.wiki/w/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4:%20%EC%9D%B8%ED%94%BC%EB%8B%88%ED%8B%B0%20%EC%9B%8C'">Infiniti War(wiki)</a></li>
+            
+           <li><a href="#" style="color: silver;" id="font1" onclick="location.href='https://namu.wiki/w/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4:%20%EC%97%94%EB%93%9C%EA%B2%8C%EC%9E%84'">End Game(wiki)</a></li>
+           
         </ul>
+        
         </nav>
-        <div style="margin: 20px;"></div>
+    
+        <div style="margin: 20px;"></div>       
 <!--  -->
 <div id="Lside">
     <aside id="Lside">
         <input type="radio" name="tab" checked="checked" id="first">
         <input type="radio" name="tab" id="second">
         <section class="buttons">
-            <label for="first">Movie</label>
-            <label for="second">Drama</label>
+            <label for="first" style="color: snow; background-color: darkred;" id="font1">YouTube</label>
+            <label for="second" style="background-color: snow; color: darkred;" id="font1">ComingSoon</label>
         </section>
     <!--  -->
     <div class="">
     <ul>
         <li class="item">
-        <a href="#">
+        <a href="https://youtu.be/eOrNdBpGMv8">
                 <div class="thumbnail">
                     <img src="A/01A.jpg" alt="" width="45" height="45">
                 </div>
                 <div class="description">
-                    <strong>Movie</strong>
-                    <p>
-                     Avengers
+                    <strong style="color: silver;">Avengers</strong>
+                    <p style="color: silver;">
+                     Trailer
                     </p>
                 </div>
             </a>
             </li>
-        <li class="item"><a href="#">
+        <li class="item"><a href="https://youtu.be/tmeOjFno6Do">
                 <div class="thumbnail">
-                    <img src="A/03IF.jpg" alt="" width="45" height="45">
+
+                    <img src="A/02AOU.jpg" alt="" width="45" height="45">
                 </div>
                 <div class="description">
-                    <strong>Movie</strong>
-                    <p>Avengers</p>
+                    <strong style="color: darkred;">Age Of Ultron</strong>
+                    <p style="color: darkred;">Trailer</p>
                 </div>
             </a></li>
                 </li>
-    <li class="item"><a href="#">
+    <li class="item"><a href="https://youtu.be/6ZfuNTqbHE8">
             <div class="thumbnail">
-                <img src="A/02AOU.jpg" alt="" width="45" height="45">
+                <img src="A/03IF.jpg" alt="" width="45" height="45">
             </div>
             <div class="description">
-                <strong>Movie</strong>
-                <p>Avengers</p>
+                <strong style="color: goldenrod">Infiniti War</strong>
+                <p style="color: goldenrod">Trailer</p>
             </div>
         </a></li>
                 </li>
-    <li class="item"><a href="#">
+    <li class="item"><a href="https://youtu.be/TcMBFSGVi1c">
             <div class="thumbnail">
-                <img src="A/01A.jpg" alt="" width="45" height="45">
+                <!-- <iframe width="45" height="45" src="https://www.youtube.com/embed/TcMBFSGVi1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <img src="A/04END.jpg" alt="" width="45" height="45">
             </div>
             <div class="description">
-                <strong>Movie</strong>
-                <p> Avengers</p>
+                <strong style="color: silver;">End Game</strong>
+                <p style="color: silver;">Trailer</p>
             </div>
         </a></li>
     </ul>
@@ -422,40 +451,63 @@ border: 2px solid red;
 
 
 <div id="Rside">
-    <img src="A/04END.jpg" alt="" width="300" height="550" onclick="location.href='https://namu.wiki/w/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4:%20%EC%97%94%EB%93%9C%EA%B2%8C%EC%9E%84'">
- 
+    <input type="checkbox" id="sel3">   
+    <label for="sel3"><h1 ><img src="A/04END.jpg" alt="" width="300" height="550" id="Hv"></h1></label>
+    <div id="divC">
+        <h1 style="color: silver; text-align: left;">End Game</h1>
+    </div>
 </div>
+
 <div id="Rside">
-    <img src="A/03IF.jpg" alt="" width="300" height="550" onclick="location.href='https://namu.wiki/w/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4:%20%EC%9D%B8%ED%94%BC%EB%8B%88%ED%8B%B0%20%EC%9B%8C?from=%EC%9D%B8%ED%94%BC%EB%8B%88%ED%8B%B0%20%EC%9B%8C'">
-   
-  </div>
+    <input type="checkbox" id="sel2">   
+    <label for="sel2"><h1><img src="A/03IF.jpg" alt="" width="300" height="550" id="Hv"></h1></label>
+    <div id="divC">
+        <h1 style="color: rgb(234, 4, 241); text-align: left;">Infiniti War</h1>
+    </div>
+</div>
   
+
   <div id="Rside">
-    <img src="A/02AOU.jpg" alt="" width="300" height="550" onclick="location.href='https://namu.wiki/w/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4:%20%EC%97%90%EC%9D%B4%EC%A7%80%20%EC%98%A4%EB%B8%8C%20%EC%9A%B8%ED%8A%B8%EB%A1%A0'">
-   
-  </div>
-  <div id="Rside">
-    <img src="A/01A.jpg" alt="" width="300" height="550" >
-   
+    <input type="checkbox" id="sel1">   
+    <label for="sel1"><h1><img src="A/02AOU.jpg" alt="" width="300" height="550" id="Hv"></h1></label>
+    <div id="divC">
+        <h1 style="color: rgba(216, 18, 18, 0.959); text-align: left;">Age Of Ultron</h1>
+        </div>
 </div>
 
-<!-- <input type="checkbox"/>
+  
+<div id="Rside">
+<input type="checkbox" id="sel">
+<label for="sel"><h1><img src="A/01A.jpg" alt="" width="300" height="550" id="Hv"></h1></label>
 <div id="divC">
-    <h1>asdfasfsdf  </h1>
-    <p>sdfasdfsadf
-    </div> -->
+<h1 style="color: silver; text-align: left;">Avengers</h1>
+</div>
+</div>
 
 
+  <a href="https://www.youtube.com/MarvelKorea"><h1 id="font1" style="color: darkred;">MarvelKorea</h1><img src="A/qrcode_www.youtube.com.png" alt="" width="200" height="200"></a>
+ <!-- <iframe width="200" height="245" src="https://www.youtube.com/embed/QdpxoFcdORI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+ 
+ <!-- <div style="margin: 50px;"></div> -->
+<!-- <input type="checkbox"/> -->
 <footer id="Footer">
+    
+    <input type="checkbox" id="sel_M" >
+    <label for="sel_M"><img src="A/ML.jpg" alt="" width="1450" height="300" id="Hv"></label>
+    <div id="divC">
+<h1 style="color: rgba(216, 18, 18, 0.959); text-align: left;" id="font1" class="font1">
+
+Made by RYU<br>
+2021 - 10 - 28 <br>
+<p onclick="location='https://ryugm.github.io/RYUGM/My_Contect.html'">Contact here : <u>https://ryugm.github.io/RYUGM/My_Contect.html</u> </p>
+
+    </h1>
+    </div>
+    
    
-</footer>
-
-<iframe width="200" height="245" src="https://www.youtube.com/embed/QdpxoFcdORI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div style="margin: 10px;"></div>
-
-<footer id="Footer">
-    <h1> <img src="A/ML.jpg" alt="" width="1450" height="300"></h1>
-</footer>
+    <a href="#" style="color: cyan;"><h1>TOP</h1></a>
+    </footer>
 
 </body>
 </html>
