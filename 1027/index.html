@@ -42,6 +42,12 @@
     
    
 }
+/* iframe{position: absolute;
+    top: 580px;
+        left: 25px;
+        right: 0px;
+        z-index: 5;
+} */
 #Header1{
     width: 1500px;
     height: 100px;
@@ -268,6 +274,13 @@ border: 5px solid goldenrod;
         transition-duration: 5s;
         
     }
+    #divQ{
+        overflow: hidden; 
+        width: 200px;
+        height: 200px;
+        transition-duration: 5s;
+        
+    }
     /* input{display: none;} */
     
     #Hv:hover{border: 5px solid cyan;}
@@ -298,6 +311,7 @@ border: 5px solid goldenrod;
     .box4{width:400px; height: 7px;  z-index: 1;}
     .red4 {background-color: silver; right: 300px; top: 80px;  position: absolute;
         }
+    .MK{z-index: 100;}
 </style>
 </head>
 <body>
@@ -490,9 +504,27 @@ border: 5px solid goldenrod;
 </div>
 </div>
 
+<!--  -->
 
-  <a href="https://www.youtube.com/MarvelKorea" id="Lside"><h1 id="font1" style="color: darkred; " >MarvelKorea</h1><img src="A/qrcode_www.youtube.com.png" alt="" width="200" height="200"></a>
- <!-- <iframe width="200" height="245" src="https://www.youtube.com/embed/QdpxoFcdORI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+  <a href="#" id="Lside"  > 
+    
+    <input type="checkbox" id="sel_MK" >
+    <label for="sel_MK"> 
+        <ruby>
+            <rt style="color: silver;" id="font1">QR-Code</rt>
+        <h1 id="font1" style="color: darkred;">MarvelKorea</h1>
+       </label>
+    </ruby>
+    <div id="divQ" >
+       <img src="A/qrcode_www.youtube.com.png" alt=""  width="180" height="180"  onclick="location='https://www.youtube.com/MarvelKorea'" class="MK">
+    
+       <p ><u id="font1" style="color: silver;" onclick="location='https://www.youtube.com/MarvelKorea'">Click!</u></p>
+      
+    </div>
+    <!-- <iframe width="180" height="180" src="https://www.youtube.com/embed/QdpxoFcdORI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  -->
+
+</a>
+ 
 </center>
 
  
