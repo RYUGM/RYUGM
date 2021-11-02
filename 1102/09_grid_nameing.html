@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#grid{display: grid;
+grid-template: 1fr 200px 1fr /500px 1fr;
+grid-template-areas: 
+'Header Header'
+'Aside Section '
+'Footer Footer' 
+}
+#grid>div{border: 1px solid black;}
+#Header{grid-area: Header; background-color: slateblue;}
+#Aside{grid-area: Aside; background-color: salmon;}
+#Section{grid-area: Section; background-color: skyblue;}
+#Footer{grid-area: Footer; background-color: slategray;}
+
+
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <div id="Header"><h1>Header</h1></div>
+        <div id="Aside"><h1>Aside</h1></div>
+        <div id="Section"><h1>Section</h1></div>
+        <div id="Footer"><h1>Footer</h1></div>
+    </div>
+</body>
+
+</html>

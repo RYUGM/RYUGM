@@ -10,6 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Oxanium:wght@800&display=swap"
         rel="stylesheet">
     <title>웹 페이지 실습</title>
+    <style>
+        #grid{display: grid;
+           gap: 10px;
+       grid-template: 1fr 10fr 2fr  /1fr 5fr  ;
+       grid-template-areas: 
+       'Header Header'
+       'Aside Section'
+       'Footer Footer' 
+       }
+       #grid>div{border: 1px solid black;}
+       #Header{grid-area: Header; background-color: slateblue;}
+       #Aside{grid-area: Aside; background-color: salmon;}
+       #Section{grid-area: Section; background-color: skyblue;}
+       #Footer{grid-area: Footer; background-color: slategray;}
+       #cell_one{
+           grid-row-start:2;
+           grid-row-end: 4;
+       
+           grid-column-start: 2;
+           grid-column-end: 4;
+       }
+       </style>
     <!-- 통일 규격화-->
     <style>
         * {
@@ -157,7 +179,7 @@
     <!-- content -->
 
     <!-- main seid  -->
-    <style>
+    <!-- <style>
         #content {
             width: 960px;
             margin: 0 auto;
@@ -184,7 +206,7 @@
         #main_section>article.main_article {
             font-family: 'Monsieur La Doulaise', cursive;
         }
-    </style>
+    </style> -->
     <!-- main seid  -->
     <style>
         /* 첫번째 탭 */
@@ -277,7 +299,7 @@ border: 2px solid red;
     }
 </style>
 <!-- footer -->
-<style>
+<!-- <style>
     #main_footer{
         width: 960px;
         margin: 0 auto;
@@ -289,15 +311,20 @@ border: 2px solid red;
 
         text-align: center;
     }
-</style>
+</style> -->
+
+
+
+
 </head>
 
 
 <!--                        -->
 
 <body>
+    <div id="grid">
     <!-- header -->
-    <header id="main_header">
+    <header id="Header">
         <div id="title">
             <h1>Standard Web Page</h1>
             <h2>Standard Web Page Page</h2>
@@ -330,7 +357,8 @@ border: 2px solid red;
 
 
 
-    <div id="content">
+    <div id="cell_one">
+       
         <section id="main_section">
             <article class="main_article">
                 <h1>제목1</h1>
@@ -349,6 +377,7 @@ border: 2px solid red;
         </section>
 
         <!-- First aside-->
+        <div id="Aside">
         <aside id="main_aside">
             <input type="radio" name="tab" checked="checked" id="first">
             <input type="radio" name="tab" id="second">
@@ -356,6 +385,7 @@ border: 2px solid red;
                 <label for="first">First</label>
                 <label for="second">Second</label>
             </section>
+        </div>
 <!--  -->
     <div class="tab_item">
         <ul>
@@ -458,11 +488,12 @@ border: 2px solid red;
     </div>
 
 
-    <footer id="main_footer">
+    <footer id="Footer">
 <h3>HTML5+CSS Basic</h3>
 <address>WebSite Layout Basic</address>
 
     </footer>
+</div>
 </body>
 
 </html>
