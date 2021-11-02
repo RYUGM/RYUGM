@@ -1,0 +1,26 @@
+
+div { height: 1px; }
+@iterations : 255;
+.rainbow-loop(@i) when (@i>0)
+{
+    div:nth-child(@{i})  
+    {
+      background-color: rgb(@i,@i,@i);
+    //   background: hsl (@hue,@saturation,@lightness,@alpha(-0.1));   
+    }
+    .rainbow-loop((@i)-1);  
+}
+.rainbow-loop(@iterations);   
+
+
+
+@it2 : 510;
+.myloop(@j) when (@j>255)
+{
+    div:nth-child(@{j})  
+    {
+      background-color: rgb(255,510-@j,255);   
+    }
+    .myloop((@j)-1);  
+}
+.myloop(@it2);   
