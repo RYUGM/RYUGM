@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #myH1{color: blue;}
+</style>
+
+</head>
+<body>
+    <h1 id="myH1">Hello</h1>
+    <p id="myP">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet unde harum praesentium voluptas libero ab animi facere vel aspernatur, excepturi maxime voluptates nisi, asperiores, minus porro nihil impedit maiores nemo!</p>
+
+    <img id="aaa">
+<img src="https://picsum.photos/id/684/600/400" alt="">
+
+<script>
+    let h1 = document.getElementById('myH1')
+    h1.style.color='red'
+    let myP = document.getElementById('myP')
+    myP.style.backgroundColor='springgreen'
+
+    let myImage=document.querySelector('#aaa')
+    myImage.src="https://picsum.photos/id/683/600/400"
+
+    let myBody = document.querySelector("body")
+    myBody.background="https://picsum.photos/id/686/600/400"
+</script>
+</body>
+</html>

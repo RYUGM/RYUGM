@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let inchi = 2.54
+        // Math.floor
+        let cm = prompt("1.인치 입력:")
+        if(cm>0)
+        console.log("1. = "+(cm*inchi)+"cm")
+        else
+        console.log("정확한 값을 입력하세요!")
+
+let cm1 = 0.393701
+let myinput = prompt("2.cm입력 : ")
+if(myinput>0)
+{
+    console.log("2. = "+(myinput*cm1)+"inch")
+}else{
+    console.log("정확한 값을 입력하세요!")
+}
+
+// 원의 반지름을 입력받고 원의 넓이와 둘레를 구하시오
+let PI = 3.14
+let RC = prompt("3.반지름 입력")
+if(RC>0){
+    console.log("3-1 둘레"+(RC*2*PI))
+    console.log("3-2 넓이"+(RC*RC*PI))
+}else{
+    console.log("정확한 값을 입력하세요!")
+}
+
+let AM = 1207
+let KRW = prompt("원화 입력")
+if(KRW>0){
+    console.log("4.달러"+(KRW*AM))
+}else{
+    console.log("정확한 값을 입력하세요!")
+}
+
+
+
+
+
+let year2_10 = ("경신임계갑을병정무기")
+// year2_10[0~9]
+let year2_12 = ("신유술해자축인묘진사오미")
+// year2_12[0~11]
+let myYear2 = prompt("5.태어난 년도는?")
+
+
+console.log("5."+year2_10[myYear2%10],year2_12[(myYear2%12)]+"년 입니다.")
+
+
+
+const myYear=prompt("언제 태어남?")
+let myOutput = ''
+const gan = myYear%10
+if(gan==9){myOutput +='기'}
+else if(gan==0){myOutput +='경'}
+else if(gan==2){myOutput +='임'}
+
+else if(gan==1){myOutput +='신'}
+else if(gan==3){myOutput +='계'}
+else if(gan==4){myOutput +='갑'}
+else if(gan==5){myOutput +='을'}
+else if(gan==6){myOutput +='병'}
+else if(gan==7){myOutput +='정'}
+else if(gan==8){myOutput +='무'}
+
+const tti = myYear%12
+switch(tti){
+    case 9:
+        myOutput +='사'
+        break
+        case 10:
+        myOutput +='오'
+        break
+        case 11:
+        myOutput +='미'
+        break
+        case 0:
+        myOutput +='신'
+        break
+        case 1:
+        myOutput +='유'
+        break
+        case 2:
+        myOutput +='술'
+        break
+        case 3:
+        myOutput +='해'
+        break
+        case 4:
+        myOutput +='자'
+        break
+        case 5:
+        myOutput +='축'
+        break
+        case 6:
+        myOutput +='인'
+        break
+        case 7:
+        myOutput +='묘'
+        break
+        case 8:
+        myOutput +='진'
+        break
+        default:
+            break
+        
+}
+alert(`${myYear}년은 ${myOutput}년 입니다.`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+1인치 = 2.54cm
+
+
+ -->
