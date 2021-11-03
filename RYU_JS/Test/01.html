@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <img id="myImg">
+    <img src="12/0.png" alt="">
     <script>
         let inchi = 2.54
         // Math.floor
@@ -55,6 +58,7 @@ let myYear2 = prompt("5.태어난 년도는?")
 console.log("5."+year2_10[myYear2%10],year2_12[(myYear2%12)]+"년 입니다.")
 
 
+let myImage=document.getElementById('myImg')
 
 const myYear=prompt("언제 태어남?")
 let myOutput = ''
@@ -108,6 +112,7 @@ switch(tti){
         break
         case 8:
         myOutput +='진'
+        
         break
         default:
             break
