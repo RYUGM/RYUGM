@@ -10,30 +10,33 @@
 <script>
 // let myrandomNum= Math.floor(Math.random()*5)
 // alert(myrandomNum+1)
+function inputNum(){
 
-// let myinput = []
-// for (let i = 0; i<5; i++){
-// let mynum = Number(prompt("숫자 입력"))
-// myinput[i]=mynum
+let myinput = []
+for (let i = 0; i<5; i++){
+let mynum = Number(prompt("숫자 입력"))
+myinput[i]=mynum
 
-// for(let j = 0; j<5; j++){
-// if(myinput[j] == mynum){
-//     alert("중복!")
-//     continue;
-// }
+for(let j = 0; j<5; j++){
+if(myinput[j] == mynum){
+    alert("중복!")
+    continue;
+}
 
-// myinput[i]=mynum
+myinput[i]=mynum
 
-// }
+}
 
-// console.log(myinput)
-
-// }
+console.log(myinput)
+}
+}
 
 </script>
-<!-- 사칙연산 -->
-<!-- <script>
-function Add(){
+
+
+
+ <script>
+    function Add(){
     let input1=document.querySelector("#input1").value
     let input2=document.querySelector("#input2").value
     alert(`덧셈 결과=${Number(input1)+Number(input2)}`)
@@ -54,9 +57,8 @@ function Mul(){
     alert(`곱셈 결과=${Number(input1)*Number(input2)}`)
 }
 
+</script>
 
-</script> -->
-<!-- 사칙연산 -->
 
 
 <script> 
@@ -129,9 +131,9 @@ SEP.src="winter.jpg"
 </script> 
 <!-- 계절 -->
 
+
+
 <script>
-
-
 function RPS(){
     let rock=document.querySelector("#R")
     let myrandomNum= Math.floor(Math.random()*2)
@@ -141,7 +143,7 @@ function RPS(){
 rock=3
 switch (rock-myrandomNum) {
     case 1:
-    alert('AI는 빠를 냈습니다. 졌음')
+    alert('AI는 보자기를 냈습니다. 졌음')
     
     
     RPS1.src="paper.jpg"
@@ -152,15 +154,11 @@ switch (rock-myrandomNum) {
         RPS1.src="sci.jpg"
         break;
     default:
-        alert('AI는 묵을 냈습니다. 무승부')
+        alert('AI는 바위 를 냈습니다. 무승부')
        
         RPS1.src="muc.jpg"
         break;
 }
-
-
-
-
 }
 function Paper(){
     let paper=document.querySelector("#P")
@@ -173,93 +171,127 @@ switch (paper-myrandomNum) {
     RPS1.src="sci.jpg"
         break;
         case 2:
-        alert('AI는 묵을 냈습니다. 이김')
+        alert('AI는 바위 를 냈습니다. 이김')
         RPS1.src="muc.jpg"
         break;
     default:
         alert('AI는 보자기를 냈습니다. 무승부')
         RPS1.src="paper.jpg"
         break;
-      
-
-
+      }
 }
-}
-
-
 function Ga(){
     let sci=document.querySelector("#S")
     let myrandomNum= Math.floor(Math.random()*2)
+
+    // Ga(RPS1.src="sci.jpg") 
     sci=3
+  
 switch (sci-myrandomNum) {
     case 1:
-    alert('AI는 묵을 냈습니다. 졌음')
+    
+    alert('AI는 바위 를 냈습니다.  졌음')
+    
     RPS1.src="muc.jpg"
         break;
         case 2:
-        alert('AI는 보자기를 냈습니다. 이김')
+        
+        alert('AI는 보자기 를 냈습니다. 이김')
+        
         RPS1.src="paper.jpg"
         break;
+
     default:
-        alert('AI는 가위를 냈습니다. 무승부')
+    
+        alert('AI는 가위 를 냈습니다.  무승부')
+        
         RPS1.src="sci.jpg"
         break;
 }
-
 }
 
 </script>
+
 <!-- 가위바위보 -->
 
 <script>
- let myrandomNum= Math.floor(Math.random()*44)
- Number(myrandomNum+1)
+ 
+function LottoNumber(){
 let lotto = []
-
-
 for(let i = 0; i<6; i++){
-        
-if(){
-   
-    
-    
-
+let myrandomNum= Math.floor(Math.random()*44)
+let lottoNum= (myrandomNum+1)
+if(lotto.indexOf(lottoNum)!=-1 && lotto.length>0){
+    i--;
+    continue;
+}
+lotto[i]=lottoNum
 
 }
-lotto[i]=(myrandomNum+1)
+document.writeln(lotto)
 
-
-    }
-    for (let item of lotto){
-        console.log(item)
-    }
-
-
-
-
-
+document.writeln("(새로고침 F5)")
+}
 </script>
+
+<style>
+    .container{
+        /* width: 1000px; */
+        
+        
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr  1fr   1fr;
+        grid-template-rows: 1fr  1fr   1fr;
+    }
+    #span_10{grid-column-start: 1; grid-column-end: 3;}
+
+    #span_5{grid-column-start: 3; grid-column-end: 6;}
+    #span_4{grid-column-start: 9; grid-column-end: 12;} 
+    
+
+</style>
 
 </head>
 <body>
-  <!-- <input type="text" id="input1">
-    <input type="text" id="input2">
+
+
+<div class="container">
+   
+   <div id="span_10">
+<input type="text" id="input1">
+<input type="text" id="input2"></div>
+<div id="span_10">
 <button onclick="Add()">더하기</button>
 <button onclick="XAdd()">빼기</button>
 <button onclick="Div()">나누기</button>
-<button onclick="Mul()">곱하기</button> -->
+<button onclick="Mul()">곱하기</button> 
+</div>
 
- <!-- <input type="text" id ="season">
+
+<div style="margin: 20px;"></div>
+<div id="span_10">
+ <input type="text" id ="season">
+ 
 <button onclick="SE_12()">태어난 계절</button> 
+</div>
 
 
+
+<div id="span_10">
 <button onclick="Ga()" id="S">가위</button>
 <button onclick="RPS()" id="R">바위</button>
-<button onclick="Paper()" id="P">보</button> -->
+<button onclick="Paper()" id="P">보</button>
+</div>
+
+
+<div id="span_10">
+<button onclick="LottoNumber()">로또 번호 생성하기</button>
+</div>
 
 
 
 
-
+</div>
 </body>
 </html>
