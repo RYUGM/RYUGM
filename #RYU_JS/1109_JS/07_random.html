@@ -7,29 +7,45 @@
     <title>Document</title>
     <img id="RPS1">
     <img id="SEP">
-<script>
-// let myrandomNum= Math.floor(Math.random()*5)
-// alert(myrandomNum+1)
-function inputNum(){
-
-let myinput = []
-for (let i = 0; i<5; i++){
-let mynum = Number(prompt("숫자 입력"))
-myinput[i]=mynum
-
-for(let j = 0; j<5; j++){
-if(myinput[j] == mynum){
-    alert("중복!")
+    <script>
+/*
+ let myinput = []
+    for(let i = 0; i<5; i++){
+        let num = Number(prompt("숫자입력"))
+if(myinput.indexOf(num) != -1 && myinput.length>0){
+    i--; 
+    alert("다시 입력")
     continue;
-}
 
-myinput[i]=mynum
 
 }
+myinput[i]=num
 
-console.log(myinput)
-}
-}
+
+    }
+    for (let item of myinput){
+        console.log(item)
+    }
+*/
+
+// function inputNum(){
+
+// let myinput = []
+// for (let i = 0; i<5; i++){
+// let mynum = Number(prompt("숫자 입력"))
+
+// for(let j = 0; j<5; j++){
+// if(i != 0 && myinput[i]==myinput[j]){
+//     i--;
+//     alert("중복")
+//     continue;
+// }
+// myinput[i]=mynum
+// console.log(myinput)
+// }
+
+// }
+// }
 
 </script>
 
@@ -217,7 +233,11 @@ switch (sci-myrandomNum) {
 <script>
  
 function LottoNumber(){
+  let br = document.createElement("br"); 
 let lotto = []
+let cnt = Number(prompt("출력 할 횟수 입력"))
+let cnt1= 1
+while(cnt1<cnt+1){
 for(let i = 0; i<6; i++){
 let myrandomNum= Math.floor(Math.random()*44)
 let lottoNum= (myrandomNum+1)
@@ -228,8 +248,12 @@ if(lotto.indexOf(lottoNum)!=-1 && lotto.length>0){
 lotto[i]=lottoNum
 
 }
-document.writeln(lotto)
 
+document.writeln(`${cnt1}회 로또 번호 : ${lotto}<br>`)
+
+
+cnt1++;
+}
 document.writeln("(새로고침 F5)")
 }
 </script>
@@ -258,6 +282,10 @@ document.writeln("(새로고침 F5)")
 
 <div class="container">
    
+    <!-- <div id="span_10">
+<button onclick="inputNum()">1번문제</button>
+</div> -->
+
    <div id="span_10">
 <input type="text" id="input1">
 <input type="text" id="input2"></div>
@@ -273,7 +301,7 @@ document.writeln("(새로고침 F5)")
 <div id="span_10">
  <input type="text" id ="season">
  
-<button onclick="SE_12()">태어난 계절</button> 
+<button onclick="SE_12()">태어난 월을 입력(1월~12월)</button> 
 </div>
 
 
