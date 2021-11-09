@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+// function MyAdd()
+// {
+//     let input1 = document.getElementById("input1").value
+//     let input2 = document.querySelector("#input2").value
+//     let input3 = document.querySelector("#input3").value
+//     let input4 = document.querySelector("#input4").value
+//     let input5 = document.querySelector("#input5").value
+
+ 
+// }
+function MyMul(){
+    let input1=document.querySelector("input:nth-child(1)")
+    let input2=document.querySelector("input:nth-of-type(2)")
+    let input3=document.querySelector("input:nth-of-type(3)")
+    let input4=document.querySelector("input:nth-of-type(4)")
+    let input5=document.querySelector("input:nth-of-type(5)")
+
+    let inputList=[input1,input2,input3,input4,input5]
+
+    let result = 1
+for(let i in inputList){
+    result=Number(inputList[i].value*result)
+    console.log(result)
+}
+
+sum=1
+let inputList2=document.querySelectorAll("input")
+
+for(let j in inputList2){
+    //isNaN은 숫자인지 아닌지를 체크
+    if(isNaN(inputList2[j].value))
+    break;
+    sum*=Number(inputList2[j].value)
+    // console.log(`${j}번째 값은 ${inputList2[j].value}임`)
+    // console.log(inputList2)
+    
+}
+alert(sum)
+
+sum=1
+for(let i = 0; i<inputList2.length; i++){
+    sum *= Number(inputList2[i].value)
+   
+}
+alert(sum)
+
+sum=1
+for(let item of inputList2){
+    sum*=Number(item.value)
+}
+alert(sum)
+}
+
+    </script>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <input type="text" id="input3">
+    <input type="text" id="input4">
+    <input type="text" id="input5">
+
+
+<button onclick="MyMul()">1~5숫자 곱</button>
+
+
+</body>
+</html>

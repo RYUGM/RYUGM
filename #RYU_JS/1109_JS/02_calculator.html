@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function MyAdd()
+{
+    let input1 = document.getElementById("input1").value
+    let input2 = document.querySelector("#input2").value
+    let input3 = document.querySelector("#input3").value
+    let input4 = document.querySelector("#input4").value
+    let input5 = document.querySelector("#input5").value
+
+
+    
+    // let inputlist=[input1,input2]
+    // let inputlist1=[]
+    // inputlist1[0]=input1
+    // inputlist1[1]=input2
+    alert(Number(input1)+Number(input2)+Number(input3)+Number(input4)+Number(input5))
+    // console.log(inputlist)
+    // console.log(inputlist1)
+}
+function MyMul(){
+    let input1 = document.getElementById("input1").value
+    let input2 = document.querySelector("#input2").value
+    let input3 = document.querySelector("#input3").value
+    let input4 = document.querySelector("#input4").value
+    let input5 = document.querySelector("#input5").value
+let inputList =[input1,input2,input3,input4,input5]
+
+let result =1 
+   for(i = 0; i<inputList.length; i++){
+   
+   result *= Number(inputList[i])
+
+    console.log(result)
+
+   }
+}
+
+
+    </script>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <input type="text" id="input3">
+    <input type="text" id="input4">
+    <input type="text" id="input5">
+
+<button onclick="MyAdd()">1~5숫자 합</button>
+<button onclick="MyMul()">1~5숫자 곱</button>
+
+
+</body>
+</html>

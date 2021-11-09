@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="03_arry.js">
+      
+
+       
+
+</script> -->
+
+<script>
+    let myinput = []
+    for(let i = 0; i<5; i++){
+        let num = Number(prompt("숫자입력"))
+if(myinput.indexOf(num) != -1 && myinput.length>0){
+    i--; 
+    alert("다시 입력")
+    continue;
+
+
+}
+myinput[i]=num
+
+
+    }
+    for (let item of myinput){
+        console.log(item)
+    }
+</script>
+
+</head>
+<body>
+   
+
+</body>
+</html>
