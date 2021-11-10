@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <img id="RPS1">
+    <img id="SEP">
+    <script>
+/*
+ let myinput = []
+    for(let i = 0; i<5; i++){
+        let num = Number(prompt("숫자입력"))
+if(myinput.indexOf(num) != -1 && myinput.length>0){
+    i--; 
+    alert("다시 입력")
+    continue;
+
+
+}
+myinput[i]=num
+
+
+    }
+    for (let item of myinput){
+        console.log(item)
+    }
+*/
+
+// function inputNum(){
+
+// let myinput = []
+// for (let i = 0; i<5; i++){
+// let mynum = Number(prompt("숫자 입력"))
+
+// for(let j = 0; j<5; j++){
+// if(i != 0 && myinput[i]==myinput[j]){
+//     i--;
+//     alert("중복")
+//     continue;
+// }
+// myinput[i]=mynum
+// console.log(myinput)
+// }
+
+// }
+// }
+
+</script>
+
+
+
+ <script>
+    function Add(){
+    let input1=document.querySelector("#input1").value
+    let input2=document.querySelector("#input2").value
+    alert(`덧셈 결과=${Number(input1)+Number(input2)}`)
+}
+function XAdd(){
+    let input1=document.querySelector("#input1").value
+    let input2=document.querySelector("#input2").value
+    alert(`뺄셈 결과=${Number(input1)-Number(input2)}`)
+}
+function Div(){
+    let input1=document.querySelector("#input1").value
+    let input2=document.querySelector("#input2").value
+    alert(`나눗셈 결과=${Number(input1)/Number(input2)}`)
+}
+function Mul(){
+    let input1=document.querySelector("#input1").value
+    let input2=document.querySelector("#input2").value
+    alert(`곱셈 결과=${Number(input1)*Number(input2)}`)
+}
+
+</script>
+
+
+
+<script> 
+function SE_12(){
+    let se1=document.querySelector("#season").value
+    let wssf = Number(se1)
+//방법1
+// let mytti = document.getElementById('mytti')
+// mytti.src = (tti)+".png"
+
+//방법2
+switch (wssf) {
+  
+    case 1:
+       alert('겨울')
+SEP.src="winter.jpg"
+        break;
+    case 2:
+    alert('겨울')
+    SEP.src="winter.jpg"
+        break;
+    case 3:
+    alert('봄')
+    SEP.src="spring.jpg"
+        break;
+    case 4:
+    alert('봄')
+    SEP.src="spring.jpg"
+        break;
+    case 5:
+    alert('봄')
+    SEP.src="spring.jpg"
+        break;
+    case 6:
+    alert('여름')
+    SEP.src="summer.jpg"
+        break;
+    case 7:
+    alert('여름')
+    SEP.src="summer.jpg"
+        break;
+    case 8:
+    alert('여름')
+     SEP.src="summer.jpg"
+        break;
+    case 9:
+    alert('가을')
+     SEP.src="fall.jpg"
+        break;
+    case 10:
+    alert('가을')
+     SEP.src="fall.jpg"
+        break;
+    case 11:
+    alert('가을')
+    SEP.src="fall.jpg"
+        break;
+        case 12:
+        alert('겨울')
+        SEP.src="winter.jpg"
+        break;
+
+    default:
+   alert("???")
+        break;
+}
+
+}
+
+</script> 
+<!-- 계절 -->
+
+
+
+<script>
+function RPS(){
+    let rock=document.querySelector("#R")
+    let myrandomNum= Math.floor(Math.random()*2)
+    
+   
+
+rock=3
+switch (rock-myrandomNum) {
+    case 1:
+    alert('AI는 보자기를 냈습니다. 졌음')
+    
+    
+    RPS1.src="paper.jpg"
+        break;
+        case 2:
+        alert('AI는 가위를 냈습니다. 이김')
+     
+        RPS1.src="sci.jpg"
+        break;
+    default:
+        alert('AI는 바위 를 냈습니다. 무승부')
+       
+        RPS1.src="muc.jpg"
+        break;
+}
+}
+function Paper(){
+    let paper=document.querySelector("#P")
+    let myrandomNum= Math.floor(Math.random()*2)
+    paper=3 
+
+switch (paper-myrandomNum) {
+    case 1:
+    alert('AI는 가위를 냈습니다. 졌음')
+    RPS1.src="sci.jpg"
+        break;
+        case 2:
+        alert('AI는 바위 를 냈습니다. 이김')
+        RPS1.src="muc.jpg"
+        break;
+    default:
+        alert('AI는 보자기를 냈습니다. 무승부')
+        RPS1.src="paper.jpg"
+        break;
+      }
+}
+function Ga(){
+    let sci=document.querySelector("#S")
+    let myrandomNum= Math.floor(Math.random()*2)
+
+    // Ga(RPS1.src="sci.jpg") 
+    sci=3
+  
+switch (sci-myrandomNum) {
+    case 1:
+    
+    alert('AI는 바위 를 냈습니다.  졌음')
+    
+    RPS1.src="muc.jpg"
+        break;
+        case 2:
+        
+        alert('AI는 보자기 를 냈습니다. 이김')
+        
+        RPS1.src="paper.jpg"
+        break;
+
+    default:
+    
+        alert('AI는 가위 를 냈습니다.  무승부')
+        
+        RPS1.src="sci.jpg"
+        break;
+}
+}
+
+</script>
+
+<!-- 가위바위보 -->
+
+<script>
+ 
+function LottoNumber(){
+  let br = document.createElement("br"); 
+let lotto = []
+let cnt = Number(prompt("출력 할 횟수 입력"))
+let cnt1= 1
+while(cnt1<cnt+1){
+for(let i = 0; i<6; i++){
+let myrandomNum= Math.floor(Math.random()*44)
+let lottoNum= (myrandomNum+1)
+if(lotto.indexOf(lottoNum)!=-1 && lotto.length>0){
+    i--;
+    continue;
+}
+lotto[i]=lottoNum
+
+}
+
+document.writeln(`${cnt1}회 로또 번호 : ${lotto}<br>`)
+
+
+cnt1++;
+}
+document.writeln("(새로고침 F5)")
+}
+</script>
+
+<style>
+    .container{
+        /* width: 1000px; */
+        
+        
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr  1fr   1fr;
+        grid-template-rows: 1fr  1fr   1fr;
+    }
+    #span_10{grid-column-start: 1; grid-column-end: 3;}
+
+    #span_5{grid-column-start: 3; grid-column-end: 6;}
+    #span_4{grid-column-start: 9; grid-column-end: 12;} 
+    
+
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+   
+    <!-- <div id="span_10">
+<button onclick="inputNum()">1번문제</button>
+</div> -->
+
+   <div id="span_10">
+<input type="text" id="input1">
+<input type="text" id="input2"></div>
+<div id="span_10">
+<button onclick="Add()">더하기</button>
+<button onclick="XAdd()">빼기</button>
+<button onclick="Div()">나누기</button>
+<button onclick="Mul()">곱하기</button> 
+</div>
+
+
+<div style="margin: 20px;"></div>
+<div id="span_10">
+ <input type="text" id ="season">
+ 
+<button onclick="SE_12()">태어난 월을 입력(1월~12월)</button> 
+</div>
+
+
+
+<div id="span_10">
+<button onclick="Ga()" id="S">가위</button>
+<button onclick="RPS()" id="R">바위</button>
+<button onclick="Paper()" id="P">보</button>
+</div>
+
+
+<div id="span_10">
+<button onclick="LottoNumber()">로또 번호 생성하기</button>
+</div>
+
+
+
+
+</div>
+</body>
+</html>
