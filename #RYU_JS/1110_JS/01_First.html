@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Q1(){
+        let myinput=[]
+        for(let i = 0; i<5; i++){
+            let num = Number(prompt("입력 : "))
+            let my_flag = true
+            for (let j = 0; j<i; j++){
+                if(num == myinput[j])
+                {
+                    alert('중복!')
+                    i--
+                    my_flag=false
+                    break
+                }
+            }
+            if(my_flag)
+            myinput[i]=num
+        }
+        for(let item of myinput){
+            alert(myinput)
+        }
+    }
+    </script>
+<!-- 1~5 저장 -->
+
+    <!-- <script>
+function Add(){
+    let input1=document.querySelector("#input1").value
+    let input2=document.querySelector("#input2").value
+    alert(`덧셈 결과=${Number(input1)+Number(input2)}`)
+}
+function XAdd(){
+    let input1=document.querySelector("#input3").value
+    let input2=document.querySelector("#input4").value
+    alert(`뺄셈 결과=${Number(input1)-Number(input2)}`)
+}
+function Div(){
+    let input1=document.querySelector("#input5").value
+    let input2=document.querySelector("#input6").value
+    alert(`나눗셈 결과=${Number(input1)/Number(input2)}`)
+}
+function Mul(){
+    let input1=document.querySelector("#input7").value
+    let input2=document.querySelector("#input8").value
+    alert(`곱셈 결과=${Number(input1)*Number(input2)}`)
+
+}
+    </script> -->
+
+<script>
+function plus(){
+    let one = Number(document.getElementById('one').value)
+    let two = Number(document.querySelector('#two').value)
+    let myop = document.querySelectorAll('#my_oper')[0]
+    let myresult = document.querySelector('#my_result')
+    // alert(one+two)
+    myop.innerText = "+"
+    myresult.innerText=(one+two)
+}
+
+</script>
+
+</head>
+<body>
+
+<input type="text" id="one">
+<label for="" id="my_oper"></label>
+<input type="text" id="two">
+=
+<label for="">결과</label>
+<button id="" onclick="plus()">더하기</button>
+<button id="" onclick="">곱하기</button>
+
+
+<button id="minus_result">빼기</button>
+<button id="dv_result">나누기</button>
+
+<script>
+    let minus_result = document.querySelector('#minus_result')
+    minus_result.onclick=function(){
+
+    }
+    let dv_result = document.querySelector('click',function(){})
+</script>
+<!-- 
+    <input type="text" id="inpu1"> + <input type="text" id="input2"> = <label>결과</label><button onclick="Add()">덧셈실행</button> <br>
+    <input type="text" id="input3"> - <input type="text" id="input4"> = <label>결과</label><button onclick="XAdd()">뺄셈실행</button> <br>
+    <input type="text" id="input5"> / <input type="text" id="input6"> = <label>결과</label><button onclick="Div()">나눗셈실행</button > <br>
+    <input type="text" id="input7"> * <input type="text" id="input8"> = <label>결과</label><button onclick="Mul()">곱셈실행</button > <br>
+    
+    -->
+</body>
+</html>

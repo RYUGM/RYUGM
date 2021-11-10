@@ -249,12 +249,14 @@ lotto[i]=lottoNum
 
 }
 
-document.writeln(`${cnt1}회 로또 번호 : ${lotto}<br>`)
+//document.writeln(`${cnt1}회 로또 번호 : ${lotto}<br>`)
+document.getElementById('my_span_result').innerHTML += "<br>" + cnt1+"회 :" +lotto 
 
+// document.getElementById('cnt1').innerText = "쓰고싶은말"
 
 cnt1++;
 }
-document.writeln("(새로고침 F5)")
+// document.getElementById('c').innerText = "쓰고싶은말"
 }
 </script>
 
@@ -314,7 +316,8 @@ document.writeln("(새로고침 F5)")
 
 
 <div id="span_10">
-<button onclick="LottoNumber()">로또 번호 생성하기</button>
+<button onclick="LottoNumber()" >로또 번호 생성하기</button>
+<span id ="my_span_result"></span>
 </div>
 
 

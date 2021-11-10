@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        let a = document.createElement('h1')
+        a.innerText = "안녕"+"<br>"+"하세요"
+    </script> -->
+</head>
+<body>
+    <p>몇월생?</p>
+    <input type="text"><button>계절 사진 보기</button>
+    <script>
+        let a = document.createElement('h1')
+        let mytext=document.createTextNode("계절사진은?")
+        a.appendChild(mytext)
+        document.body.appendChild(a)
+
+        let a2 = document.createElement('h1')
+        a2.innerHTML="결과가"+"<br>"+"궁금해요"
+        document.body.appendChild(a2)
+        
+        let a3 = document.createElement('h1')
+        a3.innerText = "이제"+"<br>"+"이미지 보여줘"
+        document.body.appendChild(a3)
+       
+
+        let myphoto = document.createElement('img')
+        let mybtn = document.querySelector('button')
+        mybtn.onclick=function(){
+            let mymonth = document.querySelector('input')
+            mymonth=Number(mymonth.value)
+
+            switch (mymonth) {
+                case 1:
+              
+
+                    case 2:
+                    myphoto.src="winter.jpg"
+                    break;
+                    case 3:
+                 
+                    case 4:
+                  
+                    case 5:
+                    myphoto.src="spring.jpg"
+                    break;
+                    case 6:
+                  
+                    case 7:
+                   
+                    case 8:
+                    myphoto.src="summer.jpg"
+                    break;
+                    case 9:
+                  
+                    case 10:
+                  
+                    case 11:
+                    myphoto.src="fall.jpg"
+                    break;    
+                    case 12:
+                    myphoto.src="winter.jpg"
+                    break;
+            
+                default:
+                    alert("???")
+                    break;
+            }
+document.body.appendChild(myphoto)
+let myseason = []
+myseason[0]="winter.jpg"
+myseason[1]="spring.jpg"
+myseason[2]="summer.jpg"
+myseason[3]="fall.jpg"
+
+let myMonth=[[12,1,2],[3,4,5],[6,7,8],[9,10,11]]
+let mytestp= document.createElement('img')
+
+let index = -1
+for(let i=0; i<4; i++){
+    for(let j=0; j<3; j++){
+        let find = myMonth[i].indexOf(mymonth)
+        if(find != -1){
+            index=i
+            console.log(index)
+            break;
+
+        }
+    }
+}
+mytestp.src=myseason[index]
+body.document.appendChild(mytestp)
+}
+</script>
+</body>
+</html>
+
+<!-- document 공부하자 -->
