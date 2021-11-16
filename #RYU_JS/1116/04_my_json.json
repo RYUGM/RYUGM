@@ -1,0 +1,43 @@
+data = {
+    "totSellamnt": 81032551000,
+    "returnValue": "success",
+    "drwNoDate": "2019-06-01",
+    "firstWinamnt": 4872108844,
+    "drwtNo6": 25,
+    "drwtNo4": 21,
+    "firstPrzwnerCo": 4,
+    "drwtNo5": 22,
+    "bnusNo": 24,
+    "firstAccumamnt": 19488435376,
+    "drwNo": 861,
+    "drwtNo2": 17,
+    "drwtNo3": 19,
+    "drwtNo1": 11
+}
+
+daegu={
+    "name": "대구광역시_청소년보호기관 현황",
+    "description": "대구광역시 청소년 보호기관 현황정보임(기관명, 소재지, 상담내용)",
+    "url": "https://www.data.go.kr/data/15047956/fileData.do",
+    "keywords": ["대구,청소년,보호시설"],
+    "license": "https://data.go.kr/ugs/selectPortalPolicyView.do",
+    "dateCreated": "2020-11-06",
+    "dateModified": "2020-11-06",
+    "datePublished": "2020-11-06",
+    "creator": {
+        "name": "대구광역시",
+        "contactPoint": {
+            "contactType": "여성청소년교육국 청소년과",
+            "telephone": "+82-0538035883",
+            "@type": "ContactPoint"
+        },
+        "@type": "Organization"
+    },
+    "distribution": [{
+        "encodingFormat": "CSV",
+        "contentUrl": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000002479680&fileDetailSn=1&insertDataPrcus=N",
+        "@type": "DataDownload"
+    }],
+    "@context": "https://schema.org",
+    "@type": "Dataset"
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function MyStudent(name,age,snum){
+            this.name=name
+            this.age = age
+
+            this.snum = snum
+            this.Study = function(){
+                alert(name+"학생 등록 완료")
+            }
+        }
+        // function MyStudent2(n,a){
+        //     return {
+        //         name = n,
+        //         age = a,
+        //         Study : function(){
+        //             alert(n+"님 등록 완료")
+        //         }
+        //     }
+        // }
+    </script>
+</head>
+<body>
+   이름: <input type="text"> <br>
+   나이: <input type="text"> <br>
+   <h1 >이름:</h1>
+   <h1 >나이:</h1>
+
+
+   <button>학생이름과 태어난 연도 출력하기</button>
+   <script>
+       let name=document.querySelectorAll('input')[0]
+       let age=document.querySelectorAll('input')[1]
+       let mybtn = document.querySelector('button')
+       let myname = document.querySelectorAll('h1')[0]
+       let myYear = document.querySelectorAll('h1')[1]
+
+let students=[]
+       mybtn.onclick=function(){
+        let RYU = new MyStudent(name.value,age.value,snum.value)
+        // let RYU = new MyStudent2(name.value,age.value)
+console.log(RYU)
+myname.innerText="학생명:"
+myYear.innerText="태어난 년도:"
+myname.innerText+= RYU.name
+myYear.innerText+= 2022-Number(RYU.age)
+RYU.Study()
+students.push(RYU)
+console.log(students)
+
+       }
+       
+
+    
+   </script>
+</body>
+</html>

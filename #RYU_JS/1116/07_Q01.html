@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+function Slist(snum,name,age){
+    this.snum = snum
+    this.name = name
+    this.age = age
+
+    this.commit = function(){
+        alert("학생번호"+snum+"등록 완료!")
+    }
+
+}
+function Changelist(snum){
+    let j = snum
+for (let i =0; i<snumlist.length; i++){
+    if (snumlist[i]==j){
+
+      let a= prompt("이름 변경")
+       nlist[i]=a
+     let b =  prompt("나이 변경")
+     alist[i]=b
+     console.log(nlist)
+     console.log(alist)
+    
+    }else{
+        alert("학생 번호 확인 바람!")
+    }
+}
+
+
+
+
+function Dellist(snum){
+
+
+
+}
+
+
+
+function Searchlist(snum){
+let j = snum
+for (let i =0; i<snumlist.length; i++){
+    if (snumlist[i]==j){
+       
+alert("학생번호"+snum+"의 이름 :"+nlist[i]+"나이:"+alist[i])
+
+    }else{
+        alert("학생 번호 확인 바람!")
+    }
+}
+}
+}
+
+
+
+</script>
+
+</head>
+<body>
+    번호: <input type="text">
+    이름: <input type="text">
+    나이: <input type="text">
+<br>
+
+
+    <button id="add">추가</button>
+    <!-- 중복검사를 번호로하기 -->
+    <button id="change">수정</button>
+    <!-- 번호 기준으로 이름 나이 수정 -->
+    <button id="del">삭제</button>
+    <!-- 번호 기준으로 삭제 -->
+    <button id="search">조회</button>
+    <!-- 번호 기준 이름 나이 출력 -->
+
+
+    <!-- 학생을 등록하고 삭제하는 프로그램 작성
+	- 학생 데이터는 번호, 이름, 나이
+	
+	- 학생 3명을 등록하되, 번호는 
+	  중복되면 안됨
+	
+	- 특정 학생 삭제도 해보기
+
+	- 특정 학생 정보 수정 해보기
+
+	- 특정 학생 정보 조회해보기
+ -->
+ <script>
+     let snum = document.querySelectorAll('input')[0]
+     let name = document.querySelectorAll('input')[1]
+     let age = document.querySelectorAll('input')[2]
+
+     let myaddbtn = document.querySelector('#add')
+     let mychangebtn = document.querySelector('#change')
+     let mydelbtn = document.querySelector('#del')
+     let mysearchbtn = document.querySelector('#search')
+
+
+     let mySnum = document.querySelectorAll('h1')[0]
+     let myName = document.querySelectorAll('h1')[1]
+     let myAge = document.querySelectorAll('h1')[2]
+
+     let slist=[]
+     let snumlist=[]
+     let nlist=[]
+     let alist=[]
+
+     myaddbtn.onclick=function(){
+         let RYU = new Slist(snum.value,name.value,age.value)
+         let comlist=[snum.value,name.value,age.value]
+         console.log(RYU)
+         
+         RYU.commit()
+//          let j = RYU.snum
+// for(let i =0; i<slist.length; i++){
+//     if (slist[i]==j){
+
+// alert("중복!")
+// break
+
+//     }else{
+        snumlist.push(RYU.snum)
+        slist.push(RYU)
+        
+        nlist.push(RYU.name)
+        alist.push(RYU.age)
+
+        console.log(slist)
+    
+        
+
+
+
+     }
+     mychangebtn.onclick=function(){
+         let RYUchange = new Changelist(snum.value)
+        //  snumlist.push(RYUchange)
+         
+
+
+
+     }
+
+
+     mysearchbtn.onclick=function(){
+        let RYUsearch = new Searchlist(snum.value)
+         
+
+     }
+
+
+ </script>
+</body>
+</html>

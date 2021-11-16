@@ -27,7 +27,7 @@
     }
     
     document.writeln(`${cnt1}회 로또 번호 : ${lotto}<br>`)
-    
+    // document.getElementById('result').innerText = `${cnt1}회 로또 번호 : ${lotto}`
     
     cnt1++;
     }
@@ -473,6 +473,7 @@
 <footer>
   <div>
     <button onclick="LottoNumber()">로또 번호 생성하기</button>
+    <span id="result"></span>
     </div>
 
 </footer>
