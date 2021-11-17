@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <input type="text" id="inputn">
+    <button id="lbtn">로또 번호 생성</button>
+
+    <h1 id="cnt"></h1>
+    <h1 id="fh1"></h1>
+    <h1 id="fh1"></h1>
+    <h1 id="fh1"></h1>
+    <h1 id="fh1"></h1>
+    <h1 id="fh1"></h1>
+    <h1 id="fh1"></h1>
+    <h1 id="fh1"></h1>
+
+
+    <br>
+    <h1 id="fh2"></h1>
+    <h1 id="fh2"></h1>
+    <h1 id="fh2"></h1>
+    <h1 id="fh2"></h1>
+    <h1 id="fh2"></h1>
+    <h1 id="fh2"></h1>
+    <h1 id="fh2"></h1>
+    <br>
+    <h1 id="fh3"></h1>
+    <h1 id="fh3"></h1>
+    <h1 id="fh3"></h1>
+    <h1 id="fh3"></h1>
+    <h1 id="fh3"></h1>
+    <h1 id="fh3"></h1>
+    <h1 id="fh3"></h1>
+    <br>
+    <h1 id="fh4" style="color: red;"></h1>
+
+
+    <script>
+        let lottobtn = document.querySelector('#lbtn')
+
+
+        let inputnum = document.querySelector('#inputn')
+        let h1print_1 = document.querySelectorAll('#fh1')
+
+        let h1print_2 = document.querySelectorAll('#fh2')
+        let h1print_3 = document.querySelectorAll('#fh3')
+        let h1print_4 = document.querySelectorAll('#fh4')
+
+        let h1cnt = document.querySelector('#cnt')
+
+       
+        let lotto = []
+      
+ lotto = {
+
+            function1 () {
+                let lotto = []
+                let cnt = 0
+
+                for (let i = 0; i < 7; i++) {
+
+                    let num = Math.floor(Math.random() * 45) + 1
+                    if (i > 0) {
+                        if (lotto.indexOf(num) != -1) {
+                            i--
+                            continue
+                        }
+                    }
+                    lotto[i] = Number(num)
+                    cnt++
+
+                }
+                let i = 0
+                for (let item of h1print_1) {
+                    item.innerText = lotto[i]
+                    i++
+
+
+                }
+            },
+        
+            function2 () {
+                let lotto = []
+                let cnt = 0
+
+                for (let i = 0; i < 7; i++) {
+
+                    let num = Math.floor(Math.random() * 45) + 1
+                    if (i > 0) {
+                        if (lotto.indexOf(num) != -1) {
+                            i--
+                            continue
+                        }
+                    }
+                    lotto[i] = Number(num)
+                    cnt++
+
+                }
+                let i = 0
+                for (let item of h1print_2) {
+                    item.innerText = lotto[i]
+                    i++
+
+
+                }
+            },
+            function3 () {
+                let lotto = []
+                let cnt = 0
+
+                for (let i = 0; i < 7; i++) {
+
+                    let num = Math.floor(Math.random() * 45) + 1
+                    if (i > 0) {
+                        if (lotto.indexOf(num) != -1) {
+                            i--
+                            continue
+                        }
+                    }
+                    lotto[i] = Number(num)
+                    cnt++
+
+                }
+                let i = 0
+                for (let item of h1print_3) {
+                    item.innerText = lotto[i]
+                    i++
+
+
+                }
+            }
+        }
+        
+        lottobtn.onclick = lotto.function1()
+        lottobtn.onclick = lotto.function2()
+        lottobtn.onclick = lotto.function3()
+
+        for(let i = 0; i<lotto.length; i++){
+            
+
+        }
+
+
+        
+    </script>
+
+
+</body>
+
+</html>

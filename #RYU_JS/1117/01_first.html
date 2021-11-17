@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let cat = '타이거'
+        cat = {
+            name: '냥이',
+            age: 3,
+            color: 'gray',
+            friends:['개','닭','소','돼지'],
+            speak:function(){
+                alert("뭐함?")
+            }
+        }
+        let cat2={
+            name: '캬루',
+            age: 5,
+            color: 'white',
+            friends:[],
+            speak:function(){
+                alert("몰?루")
+            }
+        }
+        console.log(cat.name)
+        console.log(cat.age)
+        console.log(cat.color)
+        console.log(cat)
+    </script>
+    <script>
+        window.onload = function () {
+            document.getElementById('name').innerText=cat.name
+            document.querySelector('#age').innerText=cat.age
+            document.querySelector('#color').innerText=cat.color
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="age"></h1>
+    <h1 id="name"></h1>
+    <h1 id="color"></h1>
+
+</body>
+
+</html>

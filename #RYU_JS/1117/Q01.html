@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    class MyAnimal{
+    constructor(c,n,mst,nm,a){
+        this.category =c
+        this.name = n
+        this.master = mst
+        this.number = nm
+        this.age = a
+        this.regist=function(){
+            alert(`${nm}번 동물 등록 ${c},${n},${mst},${a}`)
+        }
+    }
+
+    }
+    window.onload = function(){
+        let my_cate = document.getElementById('ctg')
+        let my_name = document.getElementById('name')
+        let my_own = document.getElementById('master')
+        let my_num = document.getElementById('number')
+        let my_age = document.getElementById('age')
+
+        let myabtn = document.getElementById('add')
+        let my_nm_s_btn = document.getElementById('num_s')
+        let my_name_s_btn = document.getElementById('name_s')
+        let my_cate_s_btn = document.getElementById('cate_s')
+let myalist =[]
+myabtn.onclick = function(){
+for(let item of myalist){
+    if (item.number == my_num.value){
+        alert("번호 중복")
+        return 
+    }
+   
+}
+myalist.push(new MyAnimal(my_cate.value,my_name.value,my_own.value,my_num.value,my_age.value))
+console.log(myalist)
+myalist[myalist.length-1].regist();
+}
+
+my_nm_s_btn.onclick =function(){
+    for (let item of myalist){
+        if(item.number == my_num.value){
+            alert(`${my_num.value}번 동물 ${my_cate.value},${my_name.value},${my_age.value},${my_own.value}`)
+            return
+        }
+    }
+}
+my_name_s_btn.onclick=function(){
+    let temp=[]
+    for (let item of myalist){
+        if(item.name == my_name.value){
+            temp.push(item)
+        }
+    }
+    console.log(temp)
+}
+my_cate_s_btn.onclick=function(){
+let temp=[]
+for (let item of myalist){
+        if(item.category == my_cate.value){
+          //  temp.push(item)
+        temp.push(new MyAnimal(item.category,item.name,item.master,item.number,item.age))
+        }
+    }
+    temp[0].master='한지우'
+console.log(temp)
+console.log(myalist)
+}
+    }
+    
+</script>
+
+</head>
+<body>
+  종류 &nbsp; <input type="text" id="ctg"><br>
+  이름 &nbsp; <input type="text" id="name"><br>
+  주인 &nbsp; <input type="text" id="master"><br>
+  번호 &nbsp; <input type="text" id="number"><br>
+  나이 &nbsp; <input type="text" id="age"><br>
+
+<hr>
+    <button id="add">추가</button>
+    <button id="num_s">번호로 검색</button>
+    <button id="name_s">이름으로 검색</button>
+    <button id="cate_s">종류로 검색</button>
+</body>
+</html>

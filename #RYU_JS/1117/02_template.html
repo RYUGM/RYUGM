@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function MyCat(n,a,c,g){
+this.name = n
+this.age = a
+this.color = c
+this.gender = g
+this.speak = function(){
+    alert('내 이름은'+n+'이다옹')
+}
+        }
+        
+    </script>
+    <script>
+        let mcat1 = new MyCat('abc',23,'balck','male')
+        let mcat2 = new MyCat('캬루',2,'검정','암컷')
+        let mcat3 = new MyCat('마야',4,'고동색','수컷')
+        let cats = [mcat1,mcat2,mcat3]
+        
+        
+    </script>
+</head>
+<body>
+    <h1 id="cats"></h1>
+    
+</body>
+</html>

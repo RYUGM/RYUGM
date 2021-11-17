@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+// class Zoo{
+//     constructor(c,n,o,num,a){
+//         this.category = c
+//         this.name = n
+//         this.owner = o
+//         this.number= num
+//         this.age =a  
+        
+//     }
+// }
+
+function MyAni(c,n,o,num,a) {
+        this.category = c
+        this.name = n
+        this.owner = o
+        this.number= num
+        this.age =a  
+        this.regist = function () {
+            alert(`${num}번 동물 등록 완료(${c},${n},${o},${a})`)
+        }
+    
+}
+// let myzoolist=[]
+// for(let i = 0; i<3; i++){
+//     let category = prompt('종류')
+//     let name = prompt("이름?")
+//     let owner = prompt("주인?")
+//     let number = prompt("번호?")
+//     let age = prompt("나이?")
+//     myzoolist[i]=new MyAni(category,name,owner,number,age)
+//     myzoolist[i].regist()
+// }
+// console.log(myzoolist)
+</script>
+
+</head>
+<body>
+  종류  <input type="text" id="category"> <br>
+    이름<input type="text" id="name"><br>
+   주인 <input type="text" id="owner"><br>
+   번호 <input type="text" id="num"><br>
+   나이 <input type="text" id="age"><br>
+
+<button id="add">추가</button>
+<button id="search">번호로 검색</button>
+<button id="namesearch">이름으로 검색</button>
+<button id="categorysearch">종류로 검색</button>
+<script>
+    let my_cate = document.querySelector('#category')
+    let my_name = document.querySelector('#name')
+    let my_own = document.querySelector('#owner')
+    let my_num = document.querySelector('#num')
+    let my_age = document.querySelector('#age')
+
+let mybtn = document.querySelector('#add')
+let mysbtn = document.querySelector('#search')
+let mynbtn = document.querySelector('#namesearch')
+let mycbtn = document.querySelector('#categorysearch')
+
+
+let myzoolist = []
+mybtn.onclick = function MyAni2() {
+    for(let item of myzoolist){
+           if(item.number == my_num.value){
+            alert("번호 중복!")
+               return
+       
+       }
+
+       
+       }
+       let temp = new MyAni(my_cate.value,my_name.value,my_own.value,my_num.value,my_age.value)
+       
+       myzoolist.push(temp)
+      
+       console.log(myzoolist)
+    }
+
+mysbtn.onclick = function () {
+   
+
+
+    for(let temp of myzoolist){
+        if(my_num.value == temp.number){
+            alert(`${temp.number}의 정보: ${temp.name},${temp.age},${temp.owner}`)
+        }
+    }
+
+    
+}
+ mynbtn.onclick = function () {
+    
+    for(let temp of myzoolist){
+        
+        if(my_name.value == temp.name){
+            alert(`${temp.name}의 정보: ${temp.number},${temp.age},${temp.owner}`)
+        console.log(temp)
+        }
+    }
+ }
+mycbtn.onclick = function(){
+    for(let temp of myzoolist){
+        if(my_cate.value == temp.category){
+            alert(`${temp.category}의 정보: ${temp.name},${temp.age},${temp.owner}`)
+        }
+    }
+}
+</script>
+    <script>
+
+// my_make = document.querySelector('button')
+// my_make.onclick = function MakeA() {
+
+
+// for(let i = 0; i<3; i++){
+// let c=prompt("종류")
+// let n=prompt("이름")
+// let o=prompt("주인")
+// let num=prompt("번호")
+// let a=prompt("나이")
+
+// let myzoolist=[]
+
+//        myzoolist.push = new Zoo(c,n,o,num,a)
+       
+       
+      
+//        console.log(myzoolist)
+
+//    }
+
+
+// }
+
+       
+        
+    </script>
+</body>
+</html>
