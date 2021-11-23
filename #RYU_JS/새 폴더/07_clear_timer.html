@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let timerid
+        let cnt = 0
+        timerid = setInterval(()=>{
+            cnt++
+ console.log("cnt ="+cnt)
+        },1*1000);
+
+        setTimeout(()=>{
+            console.log("이제그만~")
+            clearInterval(timerid)
+
+        },10*1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        function mysum(...items){
+            let sum =0
+            for(let item of items){
+                sum += item
+            alert("총 합은"+sum+"이다")
+
+
+            }
+        }
+        function oldmysum(){
+            let sum =0
+            for(let item of arguments){
+                sum += item
+            alert("총 합은"+sum+"이다")
+            }
+        }
+        function mypow(a=1){
+          alert ("제곱"+a*a)
+        }
+        // mysum(1)
+        // mysum(1,2,3,4)
+        // mysum(1,100,1000,10)
+        // oldmysum(2,3,4)
+        mypow()
+        mypow(5)
+    </script>
+</body>
+</html>

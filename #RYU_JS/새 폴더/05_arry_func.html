@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(...items) {
+            console.log(items)
+        }
+//         const mynumbers = [11,55,66,22,99]
+//         mynumbers.forEach((v,i,a)=>{
+//             console.log(`${i}번째 요소:${v}`)
+//             test(...a)
+//         })
+
+//         const mynumbers = [11,55,66,22,99]
+//         mynumbers.forEach((v,i)=>{
+//             console.log(`${i}번째 요소:${v}`)
+           
+//         })
+
+//         const mynumbers = [11,55,66,22,99]
+//         mynumbers.forEach((v)=>{
+//             console.log(`요소:${v}`)
+           
+//         })
+//         const pow_numbers = mynumbers.map(
+//         (v)=>{return v*v}
+//         )
+//         test(...mynumbers)
+//         test(...pow_numbers)
+
+//         const even_numbers = mynumbers.filter(
+//             (v)=>{return v%2==0}
+//         )
+// test(...even_numbers)
+let numbers =[1,2,3,4,5,6,7,8,9,10]
+numbers.filter(
+    (v)=>v%2==0
+).map(
+    (v)=>v*v
+).forEach(
+    (v)=>console.log(v)
+)
+    </script>
+</body>
+</html>
