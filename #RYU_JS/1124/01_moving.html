@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function nextRandomInteger(limit) {
+            return Math.round(Math.random() * limit)
+        }
+        let randomAlphabet = (
+            
+            function () {
+                                      
+            
+                const alphabet= "이ABCDEFGHIJKLMNOPQRSDUVWXYZ韓國妍污户吴录동ぁあぃいぅうぇえぉおかがきぎくぐけげこ준ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ"
+                const alphabet2= "मेरा नाम मोहनदास करमचंद गांधी हैवह कोरियाई है। यह भी महंगे क्यों करता हैनमस्तेनमस्तेनमस्तेनमस्तेनमस्तेनमस्तेनमस्तेनमस्तेनमस्ते"
+                const alphabet3= "＋－＜＝＞±×÷≠≤≥∞∴♂♀∠⌒∂∇≡≒≪ ≫ √ ∽ ∝ ∵ ∫ ∬ ∈ ∋ ⊆ ⊇ ⊂ ⊃ ∪ ∩ ∧ ∨ ￢ ⇒ ⇔ ∀ ∮ ∑ ∏"
+          const lang =[alphabet,alphabet2,alphabet3]
+          
+            
+
+                return function () {
+                    const myalpha= lang[nextRandomInteger(1)]
+                    return myalpha.charAt(nextRandomInteger(myalpha.length-2)) 
+                   
+
+                }
+            }
+        )()
+
+        function randomSpeed(maxSpeed) {
+            return Math.random() * maxSpeed - Math.random() * maxSpeed
+        }
+                         
+                                     
+        </script>
+    <script>
+        let canvasHeight = 400
+        let canvasWidth = 700
+      let intext =  document.querySelector("#inpu")
+        // let input1= document.querySelector("#inpu")
+        
+
+        function MovingText(param) {
+            
+
+            this.x = nextRandomInteger(canvasWidth)
+            this.y = nextRandomInteger(canvasHeight)
+            this.vx = randomSpeed(10)
+            this.vy = randomSpeed(10)
+            this.b = document.createElement("h1")
+            
+            // this.b.innerText = randomAlphabet()
+            this.b.style.position = 'fixed'
+                                      
+            document.body.appendChild(this.b)
+            
+            if(!param)
+            this.b.innerText = randomAlphabet()
+            else
+            this.b.
+
+            
+            this.move = function () {
+                if (this.x < 0 || this.x > canvasWidth) {
+                    this.vx *= -1
+
+                }
+                if (this.y < 0 || this.y > canvasHeight) {
+                    this.vy *= -1
+
+                }
+                this.x += this.vx
+                this.y += this.vy
+                this.b.style.left = this.x + 'px'
+                this.b.style.top = this.y + "px"
+
+           
+
+        let r=Math.floor(Math.random()*256)
+        let g=Math.floor(Math.random()*256)
+        let b=Math.floor(Math.random()*256)
+        let tempcolor = `rgb(${r},${g},${b})`
+
+        this.b.style.color = tempcolor
+        // this.b2.style.color = tempcolor
+
+        // document.body.style.backgroundColor = tempcolor
+            }
+        }
+    </script>
+    <script>
+        
+
+
+    </script>
+    <script>
+        window.onload = function () {
+           let adder = document.querySelector("button")
+           let input = document.querySelector("input")
+           adder.onclick=()=>{
+               movingTexts.push(new MovingText(input.value))
+           }
+           
+            let movingTexts = []
+            // let mycolors=["red","green","blue"]
+            // let backC=['pink','yellow']
+                                                       
+            for (let i = 0; i < 100; i++) {
+                movingTexts.push(new MovingText()
+                
+                )
+                
+                
+               
+            }
+            setInterval(() => {
+                
+                for (let i in movingTexts)
+                    movingTexts[i].move()
+                    movingTexts[i].b.style.color=
+                    `rgb(${nextRandomInteger(255)},${nextRandomInteger(255)},${nextRandomInteger(255)})`
+
+                    document.body.style.backgroundColor=
+                    `rgb(${nextRandomInteger(255)},${nextRandomInteger(255)},${nextRandomInteger(255)})`
+
+                    // document.body.style.backgroundColor[nextRandomInteger(2)]
+
+                    
+               
+                    
+                   
+                    
+                    
+            }, 1000 / 30);
+            
+        }
+       
+       
+    </script>
+    <style>
+        button,input{left:0px; top : 500px; position: relative;}
+    </style>
+</head>
+
+<body>
+<input type="text" ><button>글자추가</button>
+
+
+</body>
+
+</html>

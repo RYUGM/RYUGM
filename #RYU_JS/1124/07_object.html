@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        let product = {
+            name: "망꼬",
+            type: 'fruit',
+            taste:"맛있음",
+            '-':"마이너스",
+            '+':"특문은 키가 안됨",
+            '@':"따옴표로 감싸면 가능"
+        }
+        // alert(product.name)
+        // alert(product['name'])
+        // alert(product['taste'])
+        // alert(product['@'])
+        // alert(product['-'])
+        let 들여쓰기 = 5
+        product.owner = '이승훈'
+        console.log(product)
+        console.log(JSON.stringify(product,null,들여쓰기))
+
+        delete product['@']
+        console.log(product)
+        console.log(JSON.stringify(product,null,들여쓰기))
+
+
+        alert(typeof product)
+       
+        let a= []
+        alert(typeof a)
+        let b= function(){
+
+        }
+        alert(typeof b)
+        alert(Array.isArray(a))
+    </script>
+</body>
+</html>

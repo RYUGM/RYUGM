@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+        window.onload=function(){
+            let  sun = document.querySelector("#sun")
+            let  earth = document.querySelector("#earth")
+            let  moon = document.querySelector("#moon")
+            let mars = document.querySelector("#mars")
+           let myImage = document.getElementById('myimg')
+            myImage.src="제목 없음.png"
+
+            sun.style.position ="fixed"
+            earth.style.position ="fixed"
+            moon.style.position ="fixed"
+            mars.style.position= "fixed"
+            myImage.style.position="fixed"
+
+            sun.style.left = 250+"px"
+            sun.style.top = 200+"px"
+
+            let earthAngle = 0
+            let moonAngle = 0
+            let marsAngle =0
+            let myImageAngle=0
+
+            setInterval(function(){
+let earthLeft= 250+150*Math.cos(earthAngle)
+let earthTop = 200+150 *Math.sin(earthAngle)
+
+
+let moonLetf= earthLeft+50*Math.cos(moonAngle)
+let mootTop = earthTop +50 *Math.sin(moonAngle)
+
+
+let marsLetf= 300+150*Math.cos(marsAngle)
+let marsTop = 280+150 *Math.sin(marsAngle)
+
+let myImgLetf= 1400+1550*Math.cos(myImageAngle)
+let myImgTop = 300+150 *Math.sin(myImageAngle)
+
+earth.style.left= earthLeft +"px"
+earth.style.top = earthTop +"px"
+moon.style.left=moonLetf+"px"
+moon.style.top = mootTop + "px"
+
+mars.style.left=marsLetf+"px"
+mars.style.top = marsTop + "px"
+
+myImage.style.left=marsLetf+"px"
+myImage.style.top = marsTop + "px"
+
+earthAngle +=0.1
+moonAngle += 0.3
+marsAngle += 0.5
+myImageAngle += 1
+            },1000/30)
+        }
+    </script>
+</head>
+<body>
+    <h1 id="sun">😎</h1>
+    <h1 id="earth">👨‍👧‍👧</h1>
+    <h1 id="moon">🚀</h1>
+    <h1 id="mars">●</h1>
+    <img id="myimg">
+</body>
+</html>
