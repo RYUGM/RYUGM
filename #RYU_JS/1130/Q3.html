@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div></div>
+    <script>
+        const divs = document.querySelectorAll('div')
+        divs.forEach(
+        function (mydiv, myindex) {
+            // let red = 1
+            // let green = 1
+            // let blue = 1
+
+            // if (myindex < (255 * 1)) {
+            //     red = myindex
+            //     green = myindex
+            //     blue = myindex
+                
+            // }
+
+            mydiv.style.height = '900px'
+         
+            let count = 0
+            let red =0
+            let green = 0
+            let blue = 0
+   setInterval(() => {
+    mydiv.style.backgroundColor = `rgba(${red},${green},${blue},${(255-count)/255})`
+    // mydiv.style.backgroundColor = `rgba(${red},${count},${blue},${(255-count)/255})`
+    // mydiv.style.backgroundColor = `rgba(${red},${green},${count},${(255-count)/255})`
+     
+     count++
+     red++
+     green++
+     blue++
+    if(count == 255){
+         count =0
+         
+         green = 255
+     }
+    
+    else if (count == 0){
+        red = 0
+        blue = 255
+    }
+     
+   }, 1 * 10)
+
+        }
+
+        )
+    
+       
+
+        
+    </script>
+</body>
+
+</html>
