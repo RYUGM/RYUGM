@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+
+    <script>
+        // let output = ""
+        const size =10
+        let cnt = 0
+        let c_list = ["red", "orange", "yello", "green", "blue", "darkblue", "purple"]
+        let ran = Math.floor(Math.random() * 7)
+
+        for (let i = 1; i <= size; i++) {
+
+            for (let j = size; j > i; j--) {
+                // output +=" "
+                let space = document.createElement('span')
+               
+                let count = 0
+                let red = 0
+                let green = 0
+                let blue = 0
+                setInterval(function () {
+
+                    if (count < 255) {
+                        red = 255
+                        green = count
+
+                    } else if (count < (255 * 2)) {
+                        red = 255 - (count % 255)
+                        green = 255
+                    } else if (count < (255 * 3)) {
+                        blue = (count % 255)
+                        green = 255
+                    } else if (count < (255 * 4)) {
+                        blue = (count % 255)
+                        green = 255 - (count % 255)
+                    } else if (count < (255 * 5)) {
+                        blue = 255
+                        red = (count % 255)
+                    } else if (count < (255 * 6)) {
+                        red = 255
+                        blue = 255 - (count % 255)
+                    } else {
+                        count = 0
+                    }
+                    space.innerHTML = "&nbsp;"
+
+                    space.style.backgroundColor = `rgb(${red},${green},${blue})`
+                    count++
+
+                }, 2)
+              
+
+document.body.appendChild(space)
+
+                document.body.appendChild(space)
+                //   
+
+
+            }
+            
+            for (let k = 0; k < 2 * i - 1; k++) {
+                // output += '*'
+                let star = document.createElement('span')
+                let ran = Math.floor(Math.random() * 7)
+                let count = 0
+                let red = 0
+                let green = 0
+                let blue = 0
+                setInterval(function () {
+
+                    if (count < 255) {
+                        red = 255
+                        green = count
+
+                    } else if (count < (255 * 2)) {
+                        red = 255 - (count % 255)
+                        green = 255
+                    } else if (count < (255 * 3)) {
+                        blue = (count % 255)
+                        green = 255
+                    } else if (count < (255 * 4)) {
+                        blue = (count % 255)
+                        green = 255 - (count % 255)
+                    } else if (count < (255 * 5)) {
+                        blue = 255
+                        red = (count % 255)
+                    } else if (count < (255 * 6)) {
+                        red = 255
+                        blue = 255 - (count % 255)
+                    } else {
+                        count = 0
+                    }
+
+                    star.style.color = `rgb(${red},${green},${blue})`
+                    count++
+
+                }, 2)
+                star.innerHTML = "*"
+
+                document.body.appendChild(star)
+                //   
+
+
+            }
+            // let br = document.createElement('br')
+            document.body.appendChild(document.createElement('br'))
+            //여기다 넣어보자 
+        }
+        
+
+        for (let i = size - 1; i > 0; i--) {
+            for (let j = size; j > i; j--) {
+                let space = document.createElement('span')
+               
+               let count = 0
+               let red = 0
+               let green = 0
+               let blue = 0
+               setInterval(function () {
+
+                   if (count < 255) {
+                       red = 255
+                       green = count
+
+                   } else if (count < (255 * 2)) {
+                       red = 255 - (count % 255)
+                       green = 255
+                   } else if (count < (255 * 3)) {
+                       blue = (count % 255)
+                       green = 255
+                   } else if (count < (255 * 4)) {
+                       blue = (count % 255)
+                       green = 255 - (count % 255)
+                   } else if (count < (255 * 5)) {
+                       blue = 255
+                       red = (count % 255)
+                   } else if (count < (255 * 6)) {
+                       red = 255
+                       blue = 255 - (count % 255)
+                   } else {
+                       count = 0
+                   }
+                   space.innerHTML = "&nbsp;"
+
+                   space.style.backgroundColor = `rgb(${red},${green},${blue})`
+                   count++
+
+               }, 2)
+             
+
+document.body.appendChild(space)
+
+               document.body.appendChild(space)
+               //   
+
+
+           }
+           
+            for (let k = 0; k < 2 * i - 1; k++) {
+                let star = document.createElement('span')
+                star.innerHTML = "*"
+                // let ran =  Math.floor(Math.random()*7)
+                let count =0
+                let red = 0
+                let green = 0
+                let blue = 0
+                setInterval(function () {
+
+                    if (count < 255) {
+                        red = 255
+                        green = count
+
+                    } else if (count < (255 * 2)) {
+                        red = 255 - (count % 255)
+                        green = 255
+                    } else if (count < (255 * 3)) {
+                        blue = (count % 255)
+                        green = 255
+                    } else if (count < (255 * 4)) {
+                        blue = (count % 255)
+                        green = 255 - (count % 255)
+                    } else if (count < (255 * 5)) {
+                        blue = 255
+                        red = (count % 255)
+                    } else if (count < (255 * 6)) {
+                        red = 255
+                        blue = 255 - (count % 255)
+                    } else {
+                        count = 0
+                    }
+
+                    star.style.color = `rgb(${red},${green},${blue})`
+                    count++
+
+                }, 5)
+                star.innerHTML = "*"
+
+                document.body.appendChild(star)
+                //   
+
+
+            }
+            // let br = document.createElement('br')
+            document.body.appendChild(document.createElement('br'))
+        }
+    </script>
+</body>
+
+</html>

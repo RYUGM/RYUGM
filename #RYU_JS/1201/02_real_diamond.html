@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: darkgray;">
+
+    <script>
+        // let output = ""
+        const size = 5
+        let cnt = 0
+        let c_list =["red","orange","yello","green","blue","darkblue","purple"]
+        let ran =  Math.floor(Math.random()*7)
+           
+        for(let i = 1; i<=size; i++){
+
+            for (let j = size; j>i; j--){
+                // output +=" "
+                let space = document.createElement('span')
+                space.innerHTML = "&nbsp;"
+                
+                document.body.appendChild(space)
+            }
+            for(let k = 0; k<2*i-1; k++){
+                // output += '*'
+                let star = document.createElement('span')
+                let ran =  Math.floor(Math.random()*7)
+                star.innerHTML="*"
+                star.style.color=c_list[ran]
+                // star.style.color=c_list[i-2]
+                // star.style.color=c_list[i-2]
+             
+                document.body.appendChild(star)
+            //   
+                 
+
+            } 
+            // let br = document.createElement('br')
+            document.body.appendChild(document.createElement('br'))
+        }
+
+        for(let i = size-1; i>0; i--){
+            for(let j = size; j>i; j--){
+                let space = document.createElement('span')
+                space.innerHTML = "&nbsp;"
+                document.body.appendChild(space)
+
+            }
+            for(let k = 0; k<2*i-1; k++){
+                let star = document.createElement('span')
+                star.innerHTML="*"
+                let ran =  Math.floor(Math.random()*7)
+                star.style.color=c_list[ran]
+                // star.style.color=c_list[i-2]
+                // star.style.color=c_list[i-2]
+                document.body.appendChild(star)
+
+            }
+            document.body.appendChild(document.createElement('br'))
+        }
+       
+        
+    </script>
+</body>
+</html>

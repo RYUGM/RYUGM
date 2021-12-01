@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body style="background-color: black;">
+  
+
+    <script>
+        let count = 0
+        let red =0
+        let green =0
+        let blue =0
+        // const myh1 = document.querySelector('#pr')
+        let rspan = document.createElement('span')
+
+        setInterval(function(){
+
+            if(count < 255){
+                red =255
+                green = count
+                
+            }else if(count<(255*2)){
+                red = 255 - (count%255)
+                green = 255
+            }
+            else if(count<(255*3)){
+                blue = (count%255)
+                green = 255
+            }
+            else if(count<(255*4)){
+                blue = (count%255)
+                green = 255-(count%255)
+            }
+            else if(count<(255*5)){
+                blue =255
+                red = (count%255)
+            }
+            else if(count<(255*6)){
+                red =255
+                blue = 255-(count%255)
+            }
+            else{
+                count =0
+            }
+
+            rspan.style.color
+            =`rgb(${red},${green},${blue})`
+            count++
+        
+        },0.1)
+        let star = "*"
+        let cnt = 0
+        
+        for (let i =0; i<5; i++){
+            for(let j = 0; j<=i; j++){
+                
+                rspan.innerHTML += star
+
+                
+            }
+           
+            rspan.innerHTML += "<br>"
+        } 
+
+        for (let i =0; i<5; i++){
+            for(let j = 5; j>0; j--){
+                
+                rspan.innerHTML += star
+
+                
+            }
+           
+            rspan.innerHTML += "<br>"
+        } 
+ 
+// *
+// ***+2
+// *****+2
+// *******+2
+// *********+2
+// -2
+// -2
+// -2
+// -2
+
+       
+        
+        document.body.appendChild(h1_2)
+               
+
+    
+    
+        
+    </script>
+
+    <script>
+        let output = ""
+        const size = 5
+        for(let i = 1; i<=size; i++){
+
+            for (let j = size; j>i; j--){
+                output +=" "
+            }
+            for(let k = 0; k<2*i-1; k++){
+                output += '*'
+            }
+            output+="\n"
+        }
+
+        for(let i = size-1; i>0; i--){
+            for(let j = size; j>i; j--){
+                output += ' '
+
+            }
+            for(let k = 0; k<2*i-1; k++){
+                output += "*"
+            }
+            output+="\n"
+        }
+        console.log(output)
+
+    </script>
+</body>
+</html>
