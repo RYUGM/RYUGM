@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .max{color: deeppink;}
+    </style>
+    <script>
+window.onload = function(){
+    let inputNum = prompt("몇회 굴리실지?")
+    
+    let cnt = 0
+    
+    let two = 0
+    let three = 0
+    let four = 0
+    let five = 0
+    let six= 0
+    let one = 0
+    
+    for (let i = 0; i<inputNum; i++){
+        let ranNum = Math.floor(Math.random()*6)+1
+        console.log('랜덤',ranNum)
+if (ranNum == 1){
+    // console.log("1일때",ranNum)
+    one++
+}
+else if (ranNum == 2){
+    // console.log("1일때",ranNum)
+    two++
+}
+else if (ranNum == 3){
+    // console.log("1일때",ranNum)
+    three++
+}
+else if (ranNum == 4){
+    // console.log("1일때",ranNum)
+    four++
+}
+else if (ranNum == 5){
+    // console.log("1일때",ranNum)
+    five++
+}
+else if (ranNum == 6){
+    // console.log("1일때",ranNum)
+    six++
+}
+
+cnt++
+
+}
+let compare=[one,two,three,four,five,six]
+console.log('1횟수',one)
+console.log('2횟수',two)
+console.log('3횟수',three)
+console.log('4횟수',four)
+console.log('5횟수',five)
+console.log('6횟수',six)
+
+console.log("횟수",cnt)
+compare.sort()
+console.log("소트",compare[5])
+
+
+}
+
+    </script>
+</head>
+<body>
+    
+    <h1>1</h1>
+    <h1 class="1">0</h1>
+    <h2 class="1">0</h1>
+
+    <h1>2</h1>
+    <h1 class="2">0</h1>
+    <h2 class="2">0</h1>
+
+    <h1>3</h1>
+    <h1 class="3">0</h1>
+    <h2 class="3">0</h1>
+
+    <h1>4</h1>
+    <h1 class="4">0</h1>
+    <h2 class="4">0</h1>
+
+    <h1>5</h1>
+    <h1 class="5">0</h1>
+    <h2 class="5">0</h1>
+    
+    <h1>6</h1>
+    <h1 class="6">0</h1>
+    <h2 class="6">0</h1>
+
+    
+</body>
+</html>
