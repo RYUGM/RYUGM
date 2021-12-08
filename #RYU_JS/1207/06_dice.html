@@ -61,8 +61,47 @@ console.log('5횟수',five)
 console.log('6횟수',six)
 
 console.log("횟수",cnt)
-compare.sort()
-console.log("소트",compare[5])
+let emtMax=compare[0]
+
+
+for (let i = 0; i<compare.length; i++){
+    if(emtMax<compare[i])
+        emtMax = compare[i]
+        // let maxval = document.getElementsByClassName(`.${i}`)
+    // }maxval= emtMax
+           
+
+}
+// console.log("최대 몇번째?",emtMax)
+
+
+// let dice_1 =document.querySelector('.1')
+// let dice_2 =document.querySelector('.2')
+// let dice_3 =document.querySelector('.3')
+// let dice_4 =document.querySelector('.4')
+// let dice_5 =document.querySelector('.5')
+// let dice_6 =document.querySelector('.6')
+let dice_1 = document.getElementsByClassName('.1').innerText=one
+let dice_2 = document.getElementsByClassName('.2')
+let dice_3 = document.getElementsByClassName('.3')
+let dice_4 = document.getElementsByClassName('.4')
+let dice_5 = document.getElementsByClassName('.5')
+let dice_6 = document.getElementsByClassName('.6')
+
+
+// maxval.innerText=emtMax
+// dice_1
+dice_2.innerText=two
+dice_3.innerText=three
+dice_4.innerText=four
+dice_5.innerText=five
+dice_6.innerText=six
+
+
+
+
+
+
 
 
 }

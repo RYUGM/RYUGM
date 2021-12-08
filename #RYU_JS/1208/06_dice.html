@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .max{color: deeppink;}
+    </style>
+    <!-- <script>
+window.onload = function(){
+    let inputNum = prompt("몇회 굴리실지?")
+    
+    let cnt = 0
+    
+    let two = 0
+    let three = 0
+    let four = 0
+    let five = 0
+    let six= 0
+    let one = 0
+    
+    for (let i = 0; i<inputNum; i++){
+        let ranNum = Math.floor(Math.random()*6)+1
+        console.log('랜덤',ranNum)
+if (ranNum == 1){
+    // console.log("1일때",ranNum)
+    one++
+}
+else if (ranNum == 2){
+    // console.log("1일때",ranNum)
+    two++
+}
+else if (ranNum == 3){
+    // console.log("1일때",ranNum)
+    three++
+}
+else if (ranNum == 4){
+    // console.log("1일때",ranNum)
+    four++
+}
+else if (ranNum == 5){
+    // console.log("1일때",ranNum)
+    five++
+}
+else if (ranNum == 6){
+    // console.log("1일때",ranNum)
+    six++
+}
+
+cnt++
+
+}
+let compare=[one,two,three,four,five,six]
+console.log('1횟수',one)
+console.log('2횟수',two)
+console.log('3횟수',three)
+console.log('4횟수',four)
+console.log('5횟수',five)
+console.log('6횟수',six)
+
+console.log("횟수",cnt)
+let emtMax=compare[0]
+
+
+for (let i = 0; i<compare.length; i++){
+    if(emtMax<compare[i])
+        emtMax = compare[i]
+        // let maxval = document.getElementsByClassName(`.${i}`)
+    // }maxval= emtMax
+           
+
+}
+// console.log("최대 몇번째?",emtMax)
+
+
+// let dice_1 =document.querySelector('.1')
+// let dice_2 =document.querySelector('.2')
+// let dice_3 =document.querySelector('.3')
+// let dice_4 =document.querySelector('.4')
+// let dice_5 =document.querySelector('.5')
+// let dice_6 =document.querySelector('.6')
+let dice_1 = document.getElementsByClassName('.1').innerText=one
+let dice_2 = document.getElementsByClassName('.2')
+let dice_3 = document.getElementsByClassName('.3')
+let dice_4 = document.getElementsByClassName('.4')
+let dice_5 = document.getElementsByClassName('.5')
+let dice_6 = document.getElementsByClassName('.6')
+
+
+// maxval.innerText=emtMax
+// dice_1
+dice_2.innerText=two
+dice_3.innerText=three
+dice_4.innerText=four
+dice_5.innerText=five
+dice_6.innerText=six
+
+
+
+
+
+
+
+
+}
+
+    </script> -->
+</head>
+<body>
+    
+    <h1>1</h1>
+    <h1 class="a1">0</h1>
+    <h2 class="a1">0</h1>
+
+    <h1>2</h1>
+    <h1 class="a2">0</h1>
+    <h2 class="a2">0</h1>
+
+    <h1>3</h1>
+    <h1 class="a3">0</h1>
+    <h2 class="a3">0</h1>
+
+    <h1>4</h1>
+    <h1 class="a4">0</h1>
+    <h2 class="a4">0</h1>
+
+    <h1>5</h1>
+    <h1 class="a5">0</h1>
+    <h2 class="a5">0</h1>
+    
+    <h1>6</h1>
+    <h1 class="a6">0</h1>
+    <h2 class="a6">0</h1>
+
+
+        <script>
+            let bigCountLaw=prompt('시도 횟수')
+            let emptyArray=[0,0,0,0,0,0]
+            for(let i = 0; i<bigCountLaw; i++){
+                let random = Math.floor(Math.random()*6);
+                emptyArray[random]++
+            }
+            for(let i = 1; i<=6; i++){
+                document.querySelector('h1.a'+i).innerHTML=emptyArray[i-1]
+            }
+            let max=0
+            let maxIndex=0
+            for(let i = 1; i<=6; i++){
+                let percent =document.querySelector('h1.a'+i).innerHTML
+                if(max<Number(percent)){
+                    max=percent
+                    maxIndex=i
+                }
+                percent=(percent/bigCountLaw)*100
+                document.querySelector('h2.a'+i).innerHTML=parseFloat(percent).toFixed(2)+'%'
+
+                
+            }
+            document.querySelector('h2.a'+maxIndex).setAttribute('class','max')
+            document.querySelector('h1.a'+maxIndex).setAttribute('class','max')
+        </script>
+    
+</body>
+</html>
