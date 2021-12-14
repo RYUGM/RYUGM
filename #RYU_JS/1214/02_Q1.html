@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+  <!-- <input type="text" id="name"><input type="text" id="sex"><input type="text" id="num">
+  <button id="input_btn1">입력</button> -->
+  <script>
+
+    let list_name = document.createElement('input')
+    document.body.appendChild(list_name)
+    let list_sex = document.createElement('input')
+    document.body.appendChild(list_sex)
+    let list_num = document.createElement('input')
+    document.body.appendChild(list_num)
+    let input_btn = document.createElement('button')
+    input_btn.innerText='입력버튼'
+
+    let h1_str= document.createElement('h1')
+    h1_str.style.backgroundColor='cyan'
+    document.body.appendChild(h1_str)
+
+    let h1_str_fe= document.createElement('h1')
+    h1_str_fe.style.backgroundColor='pink'
+    document.body.appendChild(h1_str_fe)
+
+    let output_btn = document.createElement('button')
+    output_btn.innerText ='출력 버튼'
+    document.body.appendChild(output_btn)
+    
+    document.body.appendChild(input_btn)
+
+    let reset_btn = document.createElement('button')
+    reset_btn.innerText ="리셋버튼"
+    document.body.appendChild(reset_btn)
+
+    class Student {
+          constructor(이름,성별,번호){
+              this.이름= 이름
+              this.성별 = 성별          
+              
+              this.번호 = 번호
+          }
+                   toString(){
+    
+              return `번호:${this.번호} \t이름:${this.이름} \t성별:${this.성별}\n`
+          }
+            }
+            
+
+    const students =[]
+    input_btn.onclick=function(){
+       
+        students.push(new Student(list_name.value,list_sex.value,list_num.value))
+        console.log(students)
+                     
+     
+    }
+
+    reset_btn.onclick=function(){
+        for(let i =0; i<students.length; i++){
+            students[i]=''
+            console.log(students)
+        }
+        
+    }
+output_btn.onclick=function(){
+    let output = '번호\t이름\t성별\n'
+   
+    const stu_list = students.sort()
+
+            for(const item of stu_list){
+              
+              
+                output+=item.toString()
+              
+            }
+           
+            h1_str.innerText=output
+            
+
+            // for(let i =0; i<stu_list.length; i++){
+            //     if(stu_list[i].('남성')){
+            //         h1_str.innerText=stu_list[i].value
+
+            //     }else if(stu_list[i].indexof('여성')){
+            //         h1_str_fe.innerText=stu_list[i].value
+
+            //     }
+            // }
+            // if(item.indexOf('남성')){
+            // h1_str.innerText=output
+            
+            // }
+            // else if (item.indexOf('여성')){
+            //     h1_str_fe.innerText=output
+            // }
+          
+    
+        }
+    
+
+    
+                           
+            
+        //     const students =[]
+    
+        //     if(students.indexOf(input_num)!=input_num)
+        //     students.push(new Student(input_list,input_sex,input_num))
+        //     else
+        //     alert("중복?")
+            
+            
+          
+          
+            
+        </script>
+</body>
+</html>

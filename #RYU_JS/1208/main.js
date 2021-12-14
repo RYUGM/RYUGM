@@ -27,7 +27,7 @@ $(function(){
     })
     const createBubbles=function(index){
          visual.text('')
-         const bubble = $('<img src="chi.jpg">')
+         const bubble = $('<div></div>')
          visual.append(bubble)
          bubble.css('background',colors[index]).
          css('top','300px').css('animation','animation 1500ms linear infinite both')
