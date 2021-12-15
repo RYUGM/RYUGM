@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Cat{
+            constructor(이름,나이,집사이름){
+                this.이름=이름
+                this.나이=나이
+                this.집사이름=집사이름
+            }
+            eat(){
+                console.log("츄루를"+this.이름+"은/는 먹는다")
+            }
+        }
+        class Tiger extends Cat{
+            constructor(name,age,master,sleepTime){
+                super(name,age,master)
+                this.수면시간 = sleepTime
+            }
+            cry(){
+                console.log("타이거는 호랑이!!")
+            }
+            sleep(){
+                console.log(this.수면시간+"동안 잔다.")
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let cat1= new Cat('냥이',1,'moving')
+        let tiger1 = new Tiger('랑이',2,'안물어요',10)
+        cat1.eat()
+        tiger1.eat()
+        tiger1.cry()
+        tiger1.sleep()
+    </script>
+</body>
+</html>

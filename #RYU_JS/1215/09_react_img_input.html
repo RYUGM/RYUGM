@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+</head>
+<body>
+    <div id="root"></div>
+    <!-- <img src="https://picsum.photos/id/1020/600/400" alt=""> -->
+    <script type="text/babel">
+          const name = prompt("이름이 뭐야?")
+        const imgUrl = "https://picsum.photos/id/1020/600/400"
+        const chiUrl = "chi.jpg"
+        const movinglee = "https://www.youtube.com/watch?v=1f7oxfptAWA&feature=youtu.be"
+        
+        const musk = "제목 없음.png"
+         if(name == "곰"){
+            const component=
+        <div>
+           
+            <h1>{name}이 나타났다!</h1>
+                               
+            <img src={imgUrl}/>
+            </div>
+        const container = document.getElementById('root')
+        ReactDOM.render(component,container)
+         }
+
+         else if(name == "치코"){
+            const component=
+        <div>
+           
+            <h1>야생의 치코리타가 나타났다!</h1>
+                               
+            <img src={chiUrl}/>
+            </div>
+        const container = document.getElementById('root')
+        ReactDOM.render(component,container)
+         }
+
+         else if(name == "머스크"){
+            const component=
+        <div>
+           
+            <h1>화성맨이 나타났다!</h1>
+                               
+            
+            </div>
+        const container = document.getElementById('root')
+        ReactDOM.render(component,container)
+         }
+
+         else if(name == "이동준"){
+            const component=
+        <div>
+           
+            <h1>KB 1타 강사가 나타났다</h1>
+                               
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1f7oxfptAWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        const container = document.getElementById('root')
+        ReactDOM.render(component,container)
+         }
+       
+      
+      
+    </script>
+    
+</body>
+</html>

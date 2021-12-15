@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            constructor(name,age,좋아하는){
+                this.name = name
+                this.age = age
+                this.좋아하는 = 좋아하는
+
+            }
+            toString(){
+                return `이름:${this.name}나이:${this.age}견종:${this.좋아하는}`
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let mydoggy = new Person('moving',30,'리트리버')
+        alert(mydoggy.name+'는'+mydoggy.age+'살이고,'+mydoggy.좋아하는+'입니다')
+        let oak = new Person('옥수철',17,'시바견')
+        alert(oak.name+'는'+oak.age+'살이고,'+oak.좋아하는+'입니다')
+        alert(oak.toString())
+        alert(mydoggy.toString())
+        let people =[]
+        people.push(mydoggy)
+        people.push(oak)
+        people.push(new Person("RYU",34,"고양이"))
+        for(let item of people){
+            console.log(item.toString())
+        }
+    </script>
+</body>
+</html>
