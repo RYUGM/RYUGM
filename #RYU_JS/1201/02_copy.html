@@ -9,7 +9,9 @@
 </head>
 
 <body style="background-color: black;">
-
+<h1 style="border: 1px solid darkred; " ></h1>
+<h2 style=""></h2>
+<a href="" ></a>
     <script>
         // let output = ""
         const size =10
@@ -21,7 +23,8 @@
 
             for (let j = size; j > i; j--) {
                 // output +=" "
-                let space = document.createElement('span')
+                // let space = document.createElement('span')
+                let space = document.querySelector('.boxOffice')
                
                 let count = 0
                 let red = 0
@@ -51,15 +54,16 @@
                     } else {
                         count = 0
                     }
-                    space.innerHTML = "&nbsp;"
+                    // space.innerHTML = "&nbsp;"
 
                     space.style.backgroundColor = `rgb(${red},${green},${blue})`
+                    
                     count++
 
                 }, 2)
               
 
-document.body.appendChild(space)
+// document.body.appendChild(space)
 
               
 
