@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>  http://openapi.data.go.kr/openapi/service/rest/Covid19
+        일반 인증키
+    (Encoding)	
+    kimoH9RczWHPrK5ZcIuUI3N6pcjvFVnkul0Mzj0hyUVqeiuGqHluy3v8AK%2BGd%2F80Zs5nFTltW5NcfTrRWlKHAQ%3D%3D
+    일반 인증키
+    (Decoding)	
+    OaXntQpHRyJRgkgMTkaNcuJRQK7v6I7xUCVX+WLUQfbJ9xKCCrGgo0T5dI1y+j2DTJzOflBhkaBojdPY0+0HVA==
+    </h1>
+
+    <!-- G9HFJAzZbMH2jvcrH2dFmyKFVagbzoZwg3qZFy22dYg= -->
+
+<script>
+    var xhr = new XMLHttpRequest();
+var url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'; /*URL*/
+var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'kimoH9RczWHPrK5ZcIuUI3N6pcjvFVnkul0Mzj0hyUVqeiuGqHluy3v8AK%2BGd%2F80Zs5nFTltW5NcfTrRWlKHAQ%3D%3D'; /*Service Key*/
+queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
+queryParams += '&' + encodeURIComponent('startCreateDt') + '=' + encodeURIComponent('20200310'); /**/
+queryParams += '&' + encodeURIComponent('endCreateDt') + '=' + encodeURIComponent('20200315'); /**/
+xhr.open('GET', url + queryParams);
+xhr.onreadystatechange = function () {
+    if (this.readyState == 4) {
+        alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
+    }
+};
+
+xhr.send('');
+</script>
+</body>
+</html>
